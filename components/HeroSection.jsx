@@ -1,0 +1,59 @@
+"use client";
+
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+
+export default function HeroSection() {
+  return (
+    <section className="relative -top-20 flex flex-col items-center justify-center min-h-screen text-center overflow-hidden">
+      {/* Title & Subtitle */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: -20 }}
+        transition={{ duration: 0.6 }}
+        className="mt-60 max-w-3xl px-4"
+      >
+        <h1 className="text-4xl md:text-6xl font-extrabold text-[#5664FF] mb-4">
+          Empowering Minds to Heal, Not Hide
+        </h1>
+        <p className="text-lg md:text-xl text-slate-700">
+          Lorem Ipsum has been the industry's standard dummy text ever since the
+          1500s, when an unknown printer took a galley of type and tandard dummy
+          text ever since, when an unknown printer took a galley of type
+        </p>
+      </motion.div>
+
+      {/* Button */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="mt-8"
+      >
+        <Button
+          size="lg"
+          className="rounded-full px-8 py-6 text-lg bg-[#F36B1D] hover:bg-[#F36B1D]/70 text-white"
+        >
+          Get Started
+        </Button>
+      </motion.div>
+
+      {/* Skateboard Illustration */}
+      <div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.7, delay: 0.3 }}
+        className="mt-16 relative"
+      >
+        <Image
+          src="/hero-image.png"
+          alt="Skater"
+          width={200}
+          height={200}
+          className="relative z-10"
+        />
+      </div>
+    </section>
+  );
+}
