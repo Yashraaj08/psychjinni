@@ -43,15 +43,19 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
+img.transparent-gif {
+  mix-blend-mode: multiply; /* or screen, depending on background */
+}
+
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
+  --background: #0015ff0a;
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: #5664FF;
+  --primary: #5664ff;
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
@@ -165,5 +169,23 @@
   }
   .animate-spin-slow {
     animation: spin-slow 20s linear infinite;
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-slow-reverse {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
   }
 }

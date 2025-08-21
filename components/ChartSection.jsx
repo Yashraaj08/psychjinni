@@ -4,13 +4,10 @@ export default function ChartSection() {
       {/* Left Text Section */}
       <div className="max-w-lg text-center lg:text-left">
         <h1 className="text-4xl sm:text-5xl font-extrabold text-blue-600 drop-shadow-lg">
-          lorem ipsum has <br /> been thr srtd
+          Support That Understands You
         </h1>
         <p className="mt-4 text-gray-700 text-sm sm:text-base leading-relaxed">
-          Lorem Ipsum has been the industry's standard dummy text ever since the
-          1500s, when an unknown printer took a galley of type and standard dummy
-          text ever since. Lorem Ipsum has been the industry's standard dummy text
-          ever since the 1500s.
+          Redefining mental wellness with practical tools, expert guidance, and communities that foster growth and transformation.
         </p>
       </div>
 
@@ -21,23 +18,22 @@ export default function ChartSection() {
           className="absolute w-1/2 h-1/2 bg-[#FF5500]/40 rounded-full border-2 border-orange-500 flex items-center justify-center text-white font-bold text-center p-2 z-10"
           style={{ top: "0%", left: "25%" }}
         >
-          PSYCHIATRY & MEDICATION
+         Mind-Body Wellness Programs
         </div>
 
         {/* Circle 2 */}
         <div
-          className="absolute w-1/2 h-1/2 bg-[#FFE143] rounded-full border-2 border-[#CCAC00] flex items-center justify-center text-white font-bold text-center p-2"
+          className="absolute w-1/2 h-1/2 bg-[#FFE143] rounded-full border-2 border-[#CCAC00] flex items-center justify-center text-orange-500/80 font-bold text-center p-2"
           style={{ top: "25%", left: "50%" }}
         >
-          INDIVIDUAL <br /> THERAPY
+          Individual <br /> Wellness <br /> Coaching
         </div>
-
         {/* Circle 3 */}
         <div
           className="absolute w-1/2 h-1/2 bg-[#02839F]/40 rounded-full border-2 border-[#02839F] flex items-center justify-center text-white font-bold text-center p-2"
           style={{ top: "25%", left: "0%" }}
         >
-          ANONYMOUS <br /> SUPPORT GROUPS
+          Safe Space <br /> Circles
         </div>
 
         {/* Circle 4 */}
@@ -45,7 +41,7 @@ export default function ChartSection() {
           className="absolute w-1/2 h-1/2 bg-[#6B5AFF]/40 rounded-full border-2 border-purple-500 flex items-center justify-center text-white font-bold text-center p-2"
           style={{ top: "50%", left: "25%" }}
         >
-          TOOL KITS <br /> & COMMUNITY
+          Growth Toolkits
         </div>
       </div>
     </div>

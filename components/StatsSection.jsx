@@ -5,10 +5,10 @@ import { motion, useMotionValue, animate } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
 const stats = [
-  { value: 400, suffix: "+", label: "Lorem Ipsum has been the industry's" },
-  { value: 89, suffix: "K+", label: "Lorem Ipsum has been the industry's" },
-  { value: 92, suffix: "%", label: "Lorem Ipsum has been the industry's" },
-  { value: 50, suffix: "L+", label: "Lorem Ipsum has been the industry's" },
+  { value: 45, suffix: "+", label: "Tailored wellness sessions designed to support unique needs." },
+  { value: 32, suffix: "+", label: "Individuals empowered to heal, grow, and thrive." },
+  { value: 89, suffix: "%", label: "Success rate in making mental health approachable and stigma-free." },
+  { value: 30, suffix: "+", label: "Moments of mindful connection, reflection, and self-discovery." },
 ];
 
 function AnimatedCounter({ target, suffix }) {
@@ -41,15 +41,15 @@ export default function StatsSection() {
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Title */}
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
-          lorem ipsum has been thr srted
+          From silence to strength, with PsychJinni
         </h2>
 
         {/* Subtitle */}
-        <p className="mt-4 text-sm sm:text-base text-blue-100 max-w-3xl mx-auto">
+        {/* <p className="mt-4 text-sm sm:text-base text-blue-100 max-w-3xl mx-auto">
           Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
           when an unknown printer took a galley of type and standard dummy text ever since,
           when an unknown printer took a galley of type
-        </p>
+        </p> */}
 
         {/* Stats */}
         <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-8">
