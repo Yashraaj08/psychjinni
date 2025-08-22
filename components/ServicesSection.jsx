@@ -39,7 +39,7 @@ export default function ServicesSection() {
       {/* Heading */}
       <div className="top-30 text-center mb-8">
         <h2 className="text-4xl font-extrabold text-orange-500 flex items-center justify-center gap-2">
-          Our Apporach <span className="text-orange-500">*</span>
+          Our Approach <span className="text-orange-500">*</span>
         </h2>
         <p className="mt-2 max-w-2xl mx-auto text-purple-900 text-sm sm:text-base">
           Your mind is unique, and so is the healing process. We blend
