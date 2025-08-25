@@ -1,77 +1,57 @@
-import { Card } from "@/components/ui/card";
-import { Star } from "lucide-react";
+import { TestimonialsCards } from "./ui/testimonial";
 
-const TestimonialsSection = () => {
-  const testimonials = [
-    {
-      name: "Wade Warren",
-      rating: 4,
-      text: "Awesome service and I recommend to anyone needing help"
-    },
-    {
-      name: "Wade Warren", 
-      rating: 4,
-      text: "Awesome service and I recommend to anyone needing help"
-    },
-    {
-      name: "Wade Warren",
-      rating: 4, 
-      text: "Awesome service and I recommend to anyone needing help"
-    },
-    {
-      name: "Wade Warren",
-      rating: 4,
-      text: "Awesome service and I recommend to anyone needing help"
-    }
-  ];
+const testimonials = [
+  {
+    name: "Sarah M.",
+    rating: 5,
+    text: "The corporate program completely transformed how our team communicates and supports one another. Productivity and morale skyrocketed!",
+  },
+  {
+    name: "David L.",
+    rating: 4,
+    text: "The educational wellness sessions were inspiring and practical. I noticed students becoming more focused and less stressed.",
+  },
+  {
+    name: "Priya S.",
+    rating: 5,
+    text: "I joined the individual program during a very tough phase, and it helped me heal and grow at my own pace. Life-changing!",
+  },
+  {
+    name: "Michael & Anna",
+    rating: 5,
+    text: "The relationship program gave us the tools to really listen to each other and build a stronger bond. We feel closer than ever.",
+  },
+  {
+    name: "Rachel T.",
+    rating: 4,
+    text: "Mindfulness sessions helped me find balance amidst chaos. I feel calmer, more centered, and happier with myself.",
+  },
+  {
+    name: "James K.",
+    rating: 5,
+    text: "PsychJinni combines compassion with science. It’s not just therapy, it’s a journey of rediscovery and empowerment.",
+  },
+  {
+    name: "Emily R.",
+    rating: 5,
+    text: "The educational program reshaped my classroom. Students are more empathetic, collaborative, and emotionally aware.",
+  },
+  {
+    name: "Carlos D.",
+    rating: 4,
+    text: "Great program! The spiritual and mindfulness sessions really helped me feel more present and connected in my daily life.",
+  },
+];
 
+export default function TestimonialsSection() {
   return (
-    <section id="testimonials" className="py-20 bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#000] mb-4">
-            Testimonials<span className="text-[#F36B1D]">*</span>
-          </h2>
-        </div>
-
-        {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {testimonials.map((testimonial, index) => (
-            <Card key={index} className=" bg-[#7264FF]/10 shadow-md hover:shadow-medium transition-all duration-300">
-              {/* Avatar */}
-              <div className="flex justify-center">
-                <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">W</span>
-                </div>
-              </div>
-
-              {/* Rating */}
-              <div className="flex items-center justify-center">
-                <div className="flex items-center space-x-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star 
-                      key={i} 
-                      className={`w-4 h-4 ${i < Math.floor(testimonial.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} 
-                    />
-                  ))}
-                  <span className="ml-2 text-sm font-medium text-foreground">{testimonial.rating}</span>
-                </div>
-              </div>
-
-              {/* Name */}
-              <h3 className="text-lg font-bold text-center text-foreground">{testimonial.name}</h3>
-              
-              {/* Testimonial Text */}
-              <p className="text-muted-foreground text-center text-sm leading-relaxed">
-                {testimonial.text}
-              </p>
-            </Card>
-          ))}
-        </div>
+    <div className="h-[40rem] rounded-md flex flex-col antialiased bg-white items-center justify-center relative overflow-hidden">
+      <div className="text-center mb-16">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#F36B1D] mb-4">
+          Testimonials<span className="text-[#F36B1D]">*</span>
+        </h2>
       </div>
-    </section>
+      <TestimonialsCards items={testimonials} direction="right" speed="slow" />
+    </div>
   );
-};
-
-export default TestimonialsSection;
+}

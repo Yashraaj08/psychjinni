@@ -21,9 +21,9 @@ const Educational = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="-top-20 relative h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="-top-40 relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div
-          className="absolute top inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url(/educational-hero.jpg)" }}
         >
           <div className="absolute inset-0 bg-black/50"></div>
@@ -31,9 +31,9 @@ const Educational = () => {
 
         <div className="top-30 relative z-10 text-center text-white px-4">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Educational Mental Health
+            Education & Academic Wellness
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
+          {/* <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
             Supporting student and educator mental wellness in learning
             environments
           </p>
@@ -43,36 +43,39 @@ const Educational = () => {
             className="bg-orange-400 hover:bg-orange-500/90 text-white"
           >
             Learn More
-          </Button>
+          </Button> */}
         </div>
       </section>
 
       {/* Content Section */}
-      <section className="pb-20 px-4">
+      <section className="-mt-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Creating Mentally Healthy Schools
+                Because strong minds create strong futures.
               </h2>
               <p className="text-muted-foreground text-lg mb-6">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Adipisci quae aliquam iste doloremque doloribus impedit? Magnam
-                voluptate ipsum, corrupti laboriosam minima architecto molestias
-                nesciunt, magni repellat est eligendi at. Eos.
+                At PsychJinni, we know that education is more than just
+                grades—it’s about building resilient, confident, and emotionally
+                balanced learners. Our academic wellness programs support
+                students, educators, parents, and institutions in navigating
+                challenges like exam stress, peer pressure, parental
+                expectations, bullying, relationship conflicts, communication
+                gaps, and adjustment struggles.
               </p>
               <p className="text-muted-foreground text-lg mb-8">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-                veniam iste exercitationem deserunt laudantium hic quaerat
-                dolorem totam. Esse, veritatis assumenda? Aperiam esse natus
-                ipsam quis qui? Aliquam, sunt dolorem?
+                We go beyond academics to address the emotional, social, and
+                psychological well-being of learning communities—creating
+                schools and colleges where both performance and mental health
+                thrive.
               </p>
-              <Button
+              {/* <Button
                 variant="outline"
                 className="border-primary text-primary hover:bg-primary hover:text-white"
               >
                 View Our Case Studies
-              </Button>
+              </Button> */}
             </div>
 
             <div>
@@ -143,10 +146,14 @@ const Educational = () => {
                 Partner with Us for Educational Excellence
               </h2>
               <p className="text-muted-foreground text-lg mb-6">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Mollitia veniam accusantium deleniti voluptatum quibusdam
-                repudiandae ad aliquid amet, architecto non fugiat alias impedit
-                fuga. Itaque.
+                At <b>PsychJinni</b>, our mission is clear: to help students{" "}
+                <b>
+                  excel without anxiety, learn without fear, and grow with
+                  balance.
+                </b>
+                By empowering <b>educators, parents, and institutions</b>, we
+                create a future where learning communities are as{" "}
+                <b>healthy as they are successful.</b>
               </p>
               <div className="space-y-4">
                 <div className="flex items-center">

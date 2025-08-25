@@ -3,7 +3,6 @@
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import RelationshipProgramCards from "@/components/RelationshipProgramCards";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
@@ -54,41 +53,46 @@ const Relationship = () => {
         </div>
 
         <div className="top-30 relative z-10 text-center text-white px-4">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">Relationship</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+            Spirituality & Mindfulness
+          </h1>
         </div>
       </section>
 
       {/* Content Section */}
       <section className="-mt-20 px-4">
         <div className="container mx-auto max-w-6xl">
-          <div className="mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Because thriving relationships create thriving lives.
+                Because inner balance creates outer clarity.
               </h2>
               <p className="text-muted-foreground text-lg mb-6">
-                Healthy, fulfilling relationships are the cornerstone of
-                emotional well-being, personal happiness, and professional
-                fulfillment. At <b>PsychJinni</b> , we understand that every
-                relationship—whether with a partner, family member, or
-                oneself—faces unique challenges. Our relationship coaching
-                programs are designed to provide compassionate, practical
-                guidance to help individuals and couples strengthen
-                communication, navigate conflict, and cultivate deeper, lasting
-                connections.
+                A grounded, mindful life enhances emotional resilience, clarity
+                of thought, and overall well-being. At <b>PsychJinni</b>, we
+                recognize that spirituality and mindfulness are not about
+                dogma—they are practical tools for cultivating presence,
+                emotional regulation, and a sense of purpose. Our programs are
+                designed to help individuals explore inner growth, reduce
+                stress, and foster a deeper connection with themselves and the
+                world around them.
               </p>
               <p className="text-muted-foreground text-lg mb-8">
-                We address a wide range of relationship challenges including
-                infidelity, dating, long-distance relationships, premarital
-                concerns, postpartum adjustments, readiness for the right
-                partner, emotional intelligence, love languages, differences in
-                belief systems, loss of spark, financial struggles, trust
-                issues, in-law adjustments, dependency patterns, household
-                conflicts, petty fights, and intimacy concerns after childbirth.
+                We cover a wide range of areas including meditation practices,
+                self-awareness, mindfulness in daily life, spiritual alignment,
+                grief and loss, emotional resilience, life purpose exploration,
+                inner peace cultivation, conscious decision-making, and stress
+                reduction.
               </p>
+              <Button
+                variant="outline"
+                className="border-primary text-primary hover:bg-primary hover:text-white"
+              >
+                Learn About Our Approach
+              </Button>
             </div>
 
-            {/* <div>
+            <div>
               <h3 className="text-2xl font-bold text-foreground mb-6">
                 Our Relationship Services:
               </h3>
@@ -104,11 +108,11 @@ const Relationship = () => {
                   </Card>
                 ))}
               </div>
-            </div> */}
+            </div>
           </div>
 
           {/* Relationship Types */}
-          {/* <div className="mb-16">
+          <div className="mb-16">
             <h2 className="text-3xl font-bold text-foreground text-center mb-12">
               We Support All Types of Relationships
             </h2>
@@ -132,12 +136,10 @@ const Relationship = () => {
                 </Card>
               ))}
             </div>
-          </div> */}
-
-          <RelationshipProgramCards />
+          </div>
 
           {/* Common Issues Section */}
-          {/* <div className="bg-brand-yellow/10 rounded-3xl p-8 md:p-12 mb-16">
+          <div className="bg-brand-yellow/10 rounded-3xl p-8 md:p-12 mb-16">
             <h2 className="text-3xl font-bold text-foreground text-center mb-8">
               Common Relationship Challenges We Address
             </h2>
@@ -189,18 +191,21 @@ const Relationship = () => {
                 </div>
               ))}
             </div>
-          </div> */}
+          </div>
 
           {/* Contact Form */}
-          <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">
                 Start Your Relationship Journey Today
               </h2>
               <p className="text-muted-foreground text-lg mb-6">
-                At <b>PsychJinni</b> we don’t simply “fix” relationships—we
-                guide you to <b>grow, understand, and nurture them</b> with
-                empathy, insight, and actionable strategies.
+                At <b>PsychJinni</b>, we don’t prescribe a one-size-fits-all
+                approach. Instead, we empower you to{" "}
+                <b>
+                  discover your own spiritual path, practice mindful living, and
+                  integrate inner calm into everyday life.
+                </b>
               </p>
               <div className="space-y-4">
                 <div className="flex items-center">

@@ -2,24 +2,18 @@ import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 
 const Footer = () => {
   const companyLinks = [
-    { name: "About us", href: "#about" },
-    { name: "Our Team", href: "#team" },
-    { name: "Careers", href: "#careers" },
-    { name: "Press", href: "#press" },
+    { name: "About us", href: "/about-us" },
+    { name: "Our Team", href: "/about-us" },
   ];
 
   const legalLinks = [
     { name: "Terms", href: "#terms" },
     { name: "Privacy", href: "#privacy" },
-    { name: "Cookies", href: "#cookies" },
-    { name: "Licenses", href: "#licenses" },
   ];
 
   const resourceLinks = [
-    { name: "Blog", href: "#blog" },
-    { name: "Newsletter", href: "#newsletter" },
-    { name: "Events", href: "#events" },
-    { name: "Help centre", href: "#help" },
+    { name: "Blog", href: "/content-hub" },
+    { name: "Newsletter", href: "/content-hub" },
   ];
 
   return (

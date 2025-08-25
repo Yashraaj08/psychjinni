@@ -3,6 +3,7 @@
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import IndividualProgramFlipCards from "@/components/IndividualProgramCards";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
@@ -40,9 +41,9 @@ const Individual = () => {
 
         <div className="top-30 relative z-10 text-center text-white px-4">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Individual Therapy
+            Individual Growth <br />& Emotional Wellness
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
+          {/* <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
             Personalized mental health care tailored to your unique journey
           </p>
           <Button
@@ -51,41 +52,43 @@ const Individual = () => {
             className="bg-orange-400 hover:bg-orange-500/90 text-white"
           >
             Start Your Journey
-          </Button>
+          </Button> */}
         </div>
       </section>
 
       {/* Content Section */}
       <section className="-mt-20 px-4">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          <div className="mb-16">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Your Path to Mental Wellness
+                Your growth journey starts here.
               </h2>
               <p className="text-muted-foreground text-lg mb-6">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe
-                ducimus illo laborum provident velit quasi laboriosam
-                perspiciatis rem repudiandae itaque dolore ea est eum eveniet
-                tenetur repellat repellendus quis, molestiae magnam a nemo? Sed
-                nesciunt, sit quo alias numquam eaque?
+                At PsychJinni, we know that life can feel overwhelming—whether
+                it’s{" "}
+                <b>
+                  loneliness, grief, cultural identity struggles, self-doubt,
+                  sleep issues, or strained relationships
+                </b>
+                . Our individual coaching programs are crafted to provide{" "}
+                <b>clarity, confidence, and emotional balance</b>—not by
+                “fixing” you, but by walking beside you as you grow into the
+                best version of yourself.
               </p>
               <p className="text-muted-foreground text-lg mb-8">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt a
-                atque reprehenderit est magnam ullam tempore, magni ipsum
-                ducimus sed suscipit repudiandae enim aliquam blanditiis.
-                Dolorem rerum possimus et asperiores impedit amet, earum dolore
-                nisi hic voluptas nostrum nihil mollitia.
+                Every journey is unique, and our programs honour that
+                uniqueness.
               </p>
-              <Button
+              {/* <Button
                 variant="outline"
                 className="border-primary text-primary hover:bg-primary hover:text-white"
               >
                 Book a Consultation
-              </Button>
+              </Button> */}
             </div>
 
-            <div>
+            {/* <div>
               <h3 className="text-2xl font-bold text-foreground mb-6">
                 Therapy Approaches We Use:
               </h3>
@@ -101,11 +104,11 @@ const Individual = () => {
                   </Card>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Conditions We Treat */}
-          <div className="mb-16">
+          {/* <div className="mb-16">
             <h2 className="text-3xl font-bold text-foreground text-center mb-12">
               Conditions We Specialize In
             </h2>
@@ -122,10 +125,10 @@ const Individual = () => {
                 </Card>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Process Section */}
-          <div className="bg-primary rounded-3xl p-8 md:p-12 mb-16">
+          {/* <div className="bg-primary rounded-3xl p-8 md:p-12 mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
               How Our Process Works
             </h2>
@@ -156,7 +159,9 @@ const Individual = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
+
+          <IndividualProgramFlipCards />
 
           {/* Contact Form */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -165,10 +170,12 @@ const Individual = () => {
                 Ready to Take the First Step?
               </h2>
               <p className="text-muted-foreground text-lg mb-6">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus eum quo officia provident quisquam, saepe quod
-                animi magni nisi inventore illum tempora amet quaerat
-                laudantium! Necessitatibus vitae nam facilis doloremque?
+                At <b>PsychJinni</b>, we offer more than coaching—we offer a
+                safe, non-judgmental space where individuals can{" "}
+                <b>heal, grow, and redefine themselves</b>. Whether you’re
+                navigating{" "}
+                <b>grief, loneliness, identity struggles, or personal growth</b>
+                , you don’t have to walk alone.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center">

@@ -32,6 +32,13 @@ export default function ServicesSection() {
         "Specialized programs for couples and families to enhance communication, deepen relationships, and develop healthy, supportive relationships.",
       link: "/services/relationship",
     },
+    {
+      id: "05",
+      title: "Spirituality & Mindfulness",
+      description:
+        "Specialized programs for couples and families to enhance communication, deepen relationships, and develop healthy, supportive relationships.",
+      link: "/services/spirituality",
+    },
   ];
 
   return (
@@ -41,24 +48,31 @@ export default function ServicesSection() {
         <h2 className="text-4xl font-extrabold text-orange-500 flex items-center justify-center gap-2">
           Our Approach <span className="text-orange-500">*</span>
         </h2>
-        <p className="mt-2 max-w-2xl mx-auto text-purple-900 text-sm sm:text-base">
+        <p className="mt-2 max-w-2xl mx-auto text-purple-900 text-sm sm:text-base mb-4">
           Your mind is unique, and so is the healing process. We blend
           creativity and compassion to design programs that enable you to
           develop, thrive, and live on your terms at PsychJinni.
         </p>
-        <Button
-          size="lg"
-          className="mt-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 py-6 text-lg"
+        <a
+          href="/contact-us"
+          className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 py-2 shadow-xl cursor-pointer text-lg"
         >
           Book Now
-        </Button>
+        </a>
       </div>
 
       {/* Services Grid */}
       <div className="bg-yellow-400 rounded-2xl p-6 max-w-5xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {services.map((service) => (
-            <Link key={service.id} href={service.link} passHref>
+          {services.map((service, index) => (
+            <Link
+              key={service.id}
+              href={service.link}
+              passHref
+              className={`
+                ${index === services.length - 1 ? "sm:col-span-2" : ""}
+              `}
+            >
               <Card className="relative border border-orange-200 shadow-md hover:shadow-lg transition-shadow rounded-xl cursor-pointer h-full flex">
                 <CardContent className="flex flex-col justify-between p-4 w-full">
                   <div>

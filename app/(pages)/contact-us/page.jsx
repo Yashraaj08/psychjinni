@@ -1,7 +1,8 @@
-"use client"
+"use client";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import { motion } from "framer-motion";
 
 const ContactUs = () => {
   return (
@@ -12,7 +13,7 @@ const ContactUs = () => {
       <section className="-top-40 relative min-h-[60vh] flex items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url(/contact-hero.jpg)' }}
+          style={{ backgroundImage: "url(/contact-hero.jpg)" }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/60"></div>
         </div>
@@ -31,109 +32,92 @@ const ContactUs = () => {
       </section>
 
       {/* Contact Information & Form Section */}
-      <section className="pb-20 bg-white">
+      <section className="-top-20 relative">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Contact Information */}
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-3xl font-bold text-foreground mb-6">
+            <div className="space-y-10">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                <h2 className="text-4xl font-extrabold text-[#1e293b] mb-4">
                   Get in Touch
                 </h2>
-                <p className="text-muted-foreground text-lg mb-8">
+                <p className="text-lg text-slate-600 max-w-lg">
                   We're committed to providing you with the support you need.
-                  Reach out to us through any of the following methods, and
-                  we'll respond promptly.
+                  Reach out through any of the following ways, and we’ll respond
+                  promptly.
                 </p>
-              </div>
+              </motion.div>
 
-              <div className="space-y-6">
-                {/* Address */}
-                <div className="flex items-start space-x-4">
-                  <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-1">
-                      Office Address
-                    </h3>
-                    <p className="text-muted-foreground">
-                      123 Wellness Avenue
-                      <br />
-                      Healing Heights, WH 12345
-                    </p>
-                  </div>
-                </div>
+              <div className="grid gap-6">
+                {/* Contact Items */}
+                {[
+                  {
+                    title: "Office Address:",
+                    desc: "Dehradun, Uttarakhand, India",
+                    icon: "📍",
+                  },
+                  { title: "Phone:", desc: "(555) 123-4567", icon: "📞" },
+                  {
+                    title: "Email:",
+                    desc: "psychjinni@gmail.com",
+                    icon: "✉️",
+                  },
+                  {
+                    title: "Office Hours:",
+                    desc: "Mon - Fri: 10:00 AM - 7:00 PM",
+                    icon: "⏰",
+                  },
+                ].map((item, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="flex items-center gap-4 bg-white/70 backdrop-blur-lg shadow-md p-5 rounded-xl transition"
+                  >
+                    {/* Icon */}
+                    <div className="text-2xl">{item.icon}</div>
 
-                {/* Phone */}
-                <div className="flex items-start space-x-4">
-                  <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-1">
-                      Phone
-                    </h3>
-                    <p className="text-muted-foreground">(555) 123-4567</p>
-                  </div>
-                </div>
-
-                {/* Email */}
-                <div className="flex items-start space-x-4">
-                  <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-1">
-                      Email
-                    </h3>
-                    <p className="text-muted-foreground">
-                      hello@mentalwellness.com
-                    </p>
-                  </div>
-                </div>
-
-                {/* Hours */}
-                <div className="flex items-start space-x-4">
-                  <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-1">
-                      Office Hours
-                    </h3>
-                    <p className="text-muted-foreground">
-                      Monday - Friday: 9:00 AM - 7:00 PM
-                      <br />
-                      Saturday: 10:00 AM - 4:00 PM
-                      <br />
-                      Sunday: Closed
-                    </p>
-                  </div>
-                </div>
+                    {/* Title + Description in row */}
+                    <div className="flex flex-row gap-1 flex-wrap">
+                      <h3 className="font-semibold text-slate-900">
+                        {item.title}
+                      </h3>
+                      <p className="text-slate-600">{item.desc}</p>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
 
               {/* Emergency Info */}
-              <div className="bg-accent/20 p-6 rounded-lg">
-                <h3 className="font-semibold text-foreground mb-2">
-                  Emergency Support
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                className="bg-red-50 border-l-4 border-red-400 p-6 rounded-xl"
+              >
+                <h3 className="font-semibold text-red-600 mb-2">
+                  🚨 Emergency Support
                 </h3>
-                <p className="text-muted-foreground mb-3">
+                <p className="text-slate-600 mb-3">
                   If you're experiencing a mental health emergency, please call:
                 </p>
-                <p className="text-primary font-semibold">
-                  Crisis Hotline: 988
+                <p className="text-red-500 font-bold text-lg">
+                  Crisis Hotline: 19 / 1800-599-0019
                 </p>
-                <p className="text-muted-foreground text-sm mt-2">
-                  Or visit your nearest emergency room immediately.
-                </p>
-              </div>
+              </motion.div>
             </div>
 
             {/* Contact Form */}
-            <div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
               <ContactForm />
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>

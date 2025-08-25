@@ -9,17 +9,11 @@ export default function RotatingBanner() {
       <InfiniteMovingCards
         items={[
           { text: "Healing Not Hiding", gif: "/searching.gif" },
-          { text: "Healing Not Hiding", gif: "/sleeping.gif" },
           { text: "Healing Not Hiding", gif: "/searching.gif" },
-          { text: "Healing Not Hiding", gif: "/sleeping.gif" },
           { text: "Healing Not Hiding", gif: "/searching.gif" },
-          { text: "Healing Not Hiding", gif: "/sleeping.gif" },
           { text: "Healing Not Hiding", gif: "/searching.gif" },
-          { text: "Healing Not Hiding", gif: "/sleeping.gif" },
           { text: "Healing Not Hiding", gif: "/searching.gif" },
-          { text: "Healing Not Hiding", gif: "/sleeping.gif" },
           { text: "Healing Not Hiding", gif: "/searching.gif" },
-          { text: "Healing Not Hiding", gif: "/sleeping.gif" },
         ]}
       />
     </section>

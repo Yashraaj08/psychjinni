@@ -6,14 +6,15 @@ import { motion } from "framer-motion";
 
 export default function HeroSection() {
   return (
-    <section className="relative -top-20 flex flex-col items-center justify-center min-h-screen text-center overflow-hidden">
+    <section
+      className="relative -top-32 flex flex-col items-center justify-center min-h-screen text-center overflow-hidden"
+      style={{
+        background:
+          "linear-gradient(135deg, #a8c0ff 0%, #cfd9ff 30%, #e0c3fc 60%, #8ec5fc 100%)",
+      }}
+    >
       {/* Title & Subtitle */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: -20 }}
-        transition={{ duration: 0.6 }}
-        className="mt-60 max-w-3xl px-4"
-      >
+      <div className="mt-60 max-w-3xl px-4">
         <h1 className="text-4xl md:text-6xl font-extrabold text-[#5664FF] mb-4">
           Empowering Minds to Heal, Not Hide
         </h1>
@@ -25,30 +26,27 @@ export default function HeroSection() {
           walking alongside you throughout every step of your journey toward
           healing and growth.
         </p>
-      </motion.div>
+      </div>
 
       {/* Button */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="mt-8"
-      >
-        <Button
-          size="lg"
-          className="rounded-full px-8 py-6 text-lg bg-[#F36B1D] hover:bg-[#F36B1D]/70 text-white"
+      <div className="mt-8 flex items-center gap-6">
+        <a
+          href="/contact-us"          
+          className="rounded-full px-8 py-2 cursor-pointer shadow-xl text-lg bg-[#F36B1D] hover:bg-[#F36B1D]/70 text-white"
         >
           Get Started
-        </Button>
-      </motion.div>
+        </a>
 
-      {/* Skateboard Illustration */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.7, delay: 0.3 }}
-        className="relative"
-      >
+        {/* <video
+          src="/hero-animate.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          width={500}
+          height={500}
+          className="relative z-10"
+        ></video> */}
         <img
           src="/hero-animate.gif"
           alt="Skater"
@@ -56,7 +54,7 @@ export default function HeroSection() {
           height={500}
           className="relative z-10"
         />
-      </motion.div>
+      </div>
     </section>
   );
 }

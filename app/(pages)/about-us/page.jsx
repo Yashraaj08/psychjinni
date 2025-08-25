@@ -122,6 +122,42 @@ const AboutUs = () => {
               </div>
             </div>
 
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold text-foreground mb-8">Our Team</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="text-center border-gray-200 p-4 border-2 shadow-xl rounded-lg">
+                  <div className="w-20 h-20 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <span className="text-white text-2xl font-bold">SJ</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Dr. Sarah Johnson</h3>
+                  <p className="text-primary font-medium mb-2">Co-Founder & Clinical Director</p>
+                  <p className="text-muted-foreground text-sm">
+                    Licensed Clinical Psychologist with 15+ years of experience in trauma therapy and anxiety disorders.
+                  </p>
+                </div>
+                <div className="text-center border-gray-200 p-4 border-2 shadow-xl rounded-lg">
+                  <div className="w-20 h-20 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <span className="text-white text-2xl font-bold">MC</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Dr. Michael Chen</h3>
+                  <p className="text-primary font-medium mb-2">Co-Founder & Research Director</p>
+                  <p className="text-muted-foreground text-sm">
+                    Licensed Marriage & Family Therapist specializing in couples therapy and family systems.
+                  </p>
+                </div>
+                <div className="text-center border-gray-200 p-4 border-2 shadow-xl rounded-lg">
+                  <div className="w-20 h-20 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <span className="text-white text-2xl font-bold">AR</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Dr. Amanda Rodriguez</h3>
+                  <p className="text-primary font-medium mb-2">Senior Therapist</p>
+                  <p className="text-muted-foreground text-sm">
+                    Licensed Clinical Social Worker with expertise in depression, grief counseling, and group therapy.
+                  </p>
+                </div>
+              </div>
+            </div>
+
             {/* Approach Section */}
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">

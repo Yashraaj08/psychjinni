@@ -55,7 +55,7 @@ const ContactForm = ({ serviceType }) => {
   };
 
   return (
-    <Card className="p-8 bg-white shadow-soft">
+    <Card className="bg-white/80 backdrop-blur-xl shadow-lg rounded-2xl p-8">
       <div className="mb-6">
         <h3 className="text-2xl font-bold text-foreground mb-2">
           Get in Touch

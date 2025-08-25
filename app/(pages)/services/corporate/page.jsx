@@ -1,6 +1,7 @@
 "use client";
 
 import ContactForm from "@/components/ContactForm";
+import CorporatePrograms from "@/components/CorporateProgramCards";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
@@ -21,7 +22,7 @@ const Corporate = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className=" -top-20 relative h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className=" -top-30 relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url(/corporate-hero.jpg)" }}
@@ -31,9 +32,9 @@ const Corporate = () => {
 
         <div className="top-30 relative z-10 text-center text-white px-4">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Corporate Mental Health
+            Corporate Growth <br /> & Mental Fitness Programs
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
+          {/* <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
             Building healthier workplaces through comprehensive mental health
             support
           </p>
@@ -43,56 +44,65 @@ const Corporate = () => {
             className="bg-orange-400 hover:bg-orange-500/90 text-white cursor-pointer"
           >
             Get Started Today
-          </Button>
+          </Button> */}
         </div>
       </section>
 
       {/* Content Section */}
       <section className="pb-20 px-4">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          <div className="mb-16">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Transform Your Workplace Culture
+              <h2 className="text-center text-3xl md:text-4xl font-bold text-foreground mb-6">
+                Empowered Minds. Empowered Organizations.
               </h2>
               <p className="text-muted-foreground text-lg mb-6">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero
-                optio, voluptate nobis praesentium autem eligendi ducimus sit
-                reiciendis eum nam doloremque deleniti molestias, repellat
-                voluptatem cumque earum harum rem cupiditate!
+                At PsychJinni, we understand that the success of any business
+                depends on the{" "}
+                <b>mental fitness, resilience, and emotional intelligence</b> of
+                its people. Our{" "}
+                <b>corporate wellness and leadership coaching programs</b> are
+                crafted to help companies minimize attrition, absenteeism, and
+                managerial issues, while creating a workplace where employees
+                thrive both personally and professionally.
               </p>
               <p className="text-muted-foreground text-lg mb-8">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque
-                eaque laudantium ipsum, consectetur voluptas architecto magni
-                aliquid perferendis possimus soluta tempore adipisci optio
-                labore debitis ut suscipit
+                Whether it’s{" "}
+                <b>
+                  strengthening leadership, developing middle-level managers,
+                  enhancing team collaboration, stress management, or building a
+                  positive workplace culture
+                </b>
+                , our programs are designed to transform challenges into growth
+                opportunities.
               </p>
-              <Button
+              {/* <Button
                 variant="outline"
                 className="border-primary text-primary hover:bg-primary hover:text-white"
               >
                 Download Our Corporate Brochure
-              </Button>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold text-foreground mb-6">
-                Our Services Include:
-              </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {features.map((feature, index) => (
-                  <Card key={index} className="p-4 bg-white shadow-soft">
-                    <div className="flex items-center">
-                      <div className="w-2 h-2 bg-orange-400 rounded-full mr-3"></div>
-                      <span className="text-foreground font-medium">
-                        {feature}
-                      </span>
-                    </div>
-                  </Card>
-                ))}
-              </div>
+              </Button> */}
             </div>
           </div>
+          {/* <div className="pb-20 px-4">
+            <h3 className="text-2xl font-bold text-foreground mb-6">
+              Our Services Include:
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {features.map((feature, index) => (
+                <Card key={index} className="p-4 bg-white shadow-soft">
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 bg-orange-400 rounded-full mr-3"></div>
+                    <span className="text-foreground font-medium">
+                      {feature}
+                    </span>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </div> */}
+
+          <CorporatePrograms />
 
           {/* Stats Section */}
           <div className="bg-primary rounded-3xl p-8 md:p-12 mb-16">
@@ -121,10 +131,9 @@ const Corporate = () => {
                 Ready to Transform Your Workplace?
               </h2>
               <p className="text-muted-foreground text-lg mb-6">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero
-                optio, voluptate nobis praesentium autem eligendi ducimus sit
-                reiciendis eum nam doloremque deleniti molestias, repellat
-                voluptatem cumque earum harum rem cupiditate!
+                At <b>PsychJinni</b>, we partner with organizations not just to
+                build stronger employees, but to shape resilient leaders,
+                future-ready managers, and thriving workplace cultures.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center">
