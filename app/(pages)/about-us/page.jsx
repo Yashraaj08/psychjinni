@@ -4,24 +4,32 @@ import Header from "@/components/Header";
 
 const AboutUs = () => {
   return (
-    <div className="min-h-screen">
+    <div
+      className="min-h-screen"
+      style={{
+        background:
+          "linear-gradient(135deg, #a8c0ff 0%, #cfd9ff 30%, #e0c3fc 60%, #8ec5fc 100%)",
+      }}
+    >
       <Header />
 
       {/* Hero Section */}
-      <section className="-top-40 relative min-h-[60vh] flex items-center overflow-hidden">
+      <section className="-top-40 relative flex items-center overflow-hidden h-[50vh] sm:h-[60vh] md:h-[60vh] lg:h-[60vh]">
+        {/* Background Image with Overlay */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url(/about-hero.jpg)" }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-[#000]/50 to-primary/60"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-primary/60"></div>
         </div>
 
-        <div className="top-30 relative z-10 container mx-auto px-4">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+        {/* Text Content */}
+        <div className="top-20 relative z-10 container mx-auto px-4 sm:px-6 md:px-8">
+          <div className="max-w-2xl md:max-w-3xl">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-snug sm:leading-tight">
               About Us
             </h1>
-            <p className="text-xl text-white/90 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed">
               Dedicated to transforming lives through compassionate,
               evidence-based mental health care.
             </p>
@@ -123,36 +131,53 @@ const AboutUs = () => {
             </div>
 
             <div className="mb-16">
-              <h2 className="text-3xl font-bold text-foreground mb-8">Our Team</h2>
+              <h2 className="text-3xl font-bold text-foreground mb-8">
+                Our Team
+              </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="text-center border-gray-200 p-4 border-2 shadow-xl rounded-lg">
+                <div className="bg-white text-center border-gray-200 p-4 border-2 shadow-xl rounded-lg">
                   <div className="w-20 h-20 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center">
                     <span className="text-white text-2xl font-bold">SJ</span>
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Dr. Sarah Johnson</h3>
-                  <p className="text-primary font-medium mb-2">Co-Founder & Clinical Director</p>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">
+                    Dr. Sarah Johnson
+                  </h3>
+                  <p className="text-primary font-medium mb-2">
+                    Co-Founder & Clinical Director
+                  </p>
                   <p className="text-muted-foreground text-sm">
-                    Licensed Clinical Psychologist with 15+ years of experience in trauma therapy and anxiety disorders.
+                    Licensed Clinical Psychologist with 15+ years of experience
+                    in trauma therapy and anxiety disorders.
                   </p>
                 </div>
-                <div className="text-center border-gray-200 p-4 border-2 shadow-xl rounded-lg">
+                <div className="bg-white text-center border-gray-200 p-4 border-2 shadow-xl rounded-lg">
                   <div className="w-20 h-20 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center">
                     <span className="text-white text-2xl font-bold">MC</span>
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Dr. Michael Chen</h3>
-                  <p className="text-primary font-medium mb-2">Co-Founder & Research Director</p>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">
+                    Dr. Michael Chen
+                  </h3>
+                  <p className="text-primary font-medium mb-2">
+                    Co-Founder & Research Director
+                  </p>
                   <p className="text-muted-foreground text-sm">
-                    Licensed Marriage & Family Therapist specializing in couples therapy and family systems.
+                    Licensed Marriage & Family Therapist specializing in couples
+                    therapy and family systems.
                   </p>
                 </div>
-                <div className="text-center border-gray-200 p-4 border-2 shadow-xl rounded-lg">
+                <div className="bg-white text-center border-gray-200 p-4 border-2 shadow-xl rounded-lg">
                   <div className="w-20 h-20 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center">
                     <span className="text-white text-2xl font-bold">AR</span>
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Dr. Amanda Rodriguez</h3>
-                  <p className="text-primary font-medium mb-2">Senior Therapist</p>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">
+                    Dr. Amanda Rodriguez
+                  </h3>
+                  <p className="text-primary font-medium mb-2">
+                    Senior Therapist
+                  </p>
                   <p className="text-muted-foreground text-sm">
-                    Licensed Clinical Social Worker with expertise in depression, grief counseling, and group therapy.
+                    Licensed Clinical Social Worker with expertise in
+                    depression, grief counseling, and group therapy.
                   </p>
                 </div>
               </div>
@@ -171,12 +196,12 @@ const AboutUs = () => {
                 dignissimos nam laudantium nobis accusantium quis odio
                 asperiores adipisci, error omnis dicta impedit repellat?
               </p>
-              <div className="bg-orange-200/20 p-8 rounded-lg">
-                <h3 className="text-xl font-semibold text-foreground mb-4">
+              <div className="bg-orange-400/80 p-8 rounded-lg">
+                <h3 className="text-xl font-semibold text-white mb-4">
                   "Healing is not about returning to who you were, but
                   discovering who you can become."
                 </h3>
-                <p className="text-muted-foreground italic">
+                <p className="text-gray-100 italic">
                   - Mental Wellness Center Philosophy
                 </p>
               </div>
@@ -185,7 +210,9 @@ const AboutUs = () => {
         </div>
       </section>
 
-      <Footer />
+      <div className="py-10">
+        <Footer />
+      </div>
     </div>
   );
 };

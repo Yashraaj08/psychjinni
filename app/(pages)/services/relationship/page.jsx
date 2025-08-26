@@ -1,42 +1,91 @@
 "use client";
 
 import ContactForm from "@/components/ContactForm";
+import FlipCardGrid from "@/components/FilpCard";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import RelationshipProgramCards from "@/components/RelationshipProgramCards";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 
 const Relationship = () => {
-  const services = [
-    "Couples Therapy",
-    "Premarital Counseling",
-    "Family Therapy",
-    "Communication Skills Training",
-    "Conflict Resolution",
-    "Intimacy & Connection Building",
-  ];
-
-  const relationshipTypes = [
+  const relationshipPrograms = [
     {
-      type: "Romantic Couples",
-      description: "Strengthen your bond and resolve conflicts",
-      icon: "💕",
+      id: 1,
+      title: "HeartSync: Couples & Partnership Coaching",
+      tagline: "From conflict to connection—strengthen your partnership.",
+      gradient: "from-red-400 to-rose-500",
+      benefit:
+        "Strengthening your partnership allows you to feel emotionally supported, reduce stress, and experience more joy and balance in daily life.",
     },
     {
-      type: "Married Couples",
-      description: "Navigate marriage challenges together",
-      icon: "💑",
+      id: 2,
+      title: "Bridge Talk: Communication & Conflict Coaching",
+      tagline: "Speak to be heard. Listen to be understood.",
+      gradient: "from-blue-400 to-indigo-500",
+      benefit:
+        "Learning to communicate effectively helps you express yourself without guilt or fear, creating peace in your relationships and confidence in your voice.",
     },
     {
-      type: "Families",
-      description: "Improve family dynamics and communication",
-      icon: "👨‍👩‍👧‍👦",
+      id: 3,
+      title: "Family Ties: Family Dynamics & Harmony Coaching",
+      tagline: "Stronger families. Stronger foundations.",
+      gradient: "from-green-400 to-emerald-500",
+      benefit:
+        "Harmonious family relationships help you feel grounded, understood, and emotionally nourished, reducing stress and creating a sense of belonging.",
     },
     {
-      type: "Parent-Child",
-      description: "Build stronger parent-child relationships",
-      icon: "👪",
+      id: 4,
+      title: "Together Ahead: Pre-Marital & Life Transition Coaching",
+      tagline: "Prepare for the journey, not just the day.",
+      gradient: "from-purple-400 to-fuchsia-500",
+      benefit:
+        "Preparing for major life changes gives you clarity, confidence, and emotional readiness to build a life you truly desire with your partner.",
+    },
+    {
+      id: 5,
+      title: "Love Languages Lab: Emotional Intelligence & Intimacy Coaching",
+      tagline: "Empathy is the secret ingredient to lasting bonds.",
+      gradient: "from-pink-400 to-rose-500",
+      benefit:
+        "Developing emotional awareness lets you connect deeply, respond thoughtfully, and create more satisfying, fulfilling relationships.",
+    },
+    {
+      id: 6,
+      title: "Trust Builder: Infidelity & Relationship Trust Coaching",
+      tagline: "Healing wounds. Restoring connection.",
+      gradient: "from-amber-400 to-orange-500",
+      benefit:
+        "Recovering from betrayal allows you to reclaim trust in yourself and your relationships, helping you feel secure, empowered, and emotionally whole again.",
+    },
+    {
+      id: 7,
+      title: "Bond Beyond: Postpartum & New Parent Relationship Coaching",
+      tagline: "Rediscover connection after life changes.",
+      gradient: "from-cyan-400 to-sky-500",
+      benefit:
+        "Adjusting after childbirth restores closeness and understanding, helping you feel supported, valued, and connected as a partner and parent.",
+    },
+    {
+      id: 8,
+      title: "Harmony Hub: Financial & Lifestyle Relationship Coaching",
+      tagline: "Because money and life stress affect love.",
+      gradient: "from-emerald-400 to-teal-500",
+      benefit:
+        "Resolving financial and lifestyle conflicts reduces personal anxiety, promotes clarity, and allows you to enjoy life together without constant tension.",
+    },
+    {
+      id: 9,
+      title: "Family Peace: In-Law & Extended Family Coaching",
+      tagline: "Creating bridges across households.",
+      gradient: "from-indigo-400 to-blue-600",
+      benefit:
+        "Managing in-law and extended family relationships brings peace, confidence, and emotional freedom, so you can focus on your own happiness.",
+    },
+    {
+      id: 10,
+      title: "SparkRevive: Reigniting Love & Intimacy",
+      tagline: "Rediscover the passion in your relationship.",
+      gradient: "from-rose-400 to-pink-600",
+      benefit:
+        "Rekindling emotional and physical connection restores joy, excitement, and fulfillment in your personal life, boosting your overall emotional wellbeing.",
     },
   ];
 
@@ -45,7 +94,8 @@ const Relationship = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="-top-40 relative h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative flex items-center justify-center overflow-hidden h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh]">
+        {/* Background Image with Overlay */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url(/relationship-hero.jpg)" }}
@@ -53,8 +103,11 @@ const Relationship = () => {
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
 
-        <div className="top-30 relative z-10 text-center text-white px-4">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">Relationship</h1>
+        {/* Text Content */}
+        <div className="relative z-10 text-center text-white px-4 sm:px-6 md:px-8">
+          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-snug sm:leading-tight">
+            Relationship
+          </h1>
         </div>
       </section>
 
@@ -87,109 +140,12 @@ const Relationship = () => {
                 conflicts, petty fights, and intimacy concerns after childbirth.
               </p>
             </div>
-
-            {/* <div>
-              <h3 className="text-2xl font-bold text-foreground mb-6">
-                Our Relationship Services:
-              </h3>
-              <div className="grid grid-cols-1 gap-3">
-                {services.map((service, index) => (
-                  <Card key={index} className="p-4 bg-white shadow-soft">
-                    <div className="flex items-center">
-                      <div className="w-2 h-2 bg-orange-400 rounded-full mr-3"></div>
-                      <span className="text-foreground font-medium">
-                        {service}
-                      </span>
-                    </div>
-                  </Card>
-                ))}
-              </div>
-            </div> */}
           </div>
 
-          {/* Relationship Types */}
-          {/* <div className="mb-16">
-            <h2 className="text-3xl font-bold text-foreground text-center mb-12">
-              We Support All Types of Relationships
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {relationshipTypes.map((item, index) => (
-                <Card
-                  key={index}
-                  className="p-6 bg-white shadow-soft hover:shadow-medium transition-shadow"
-                >
-                  <div className="flex items-start">
-                    <div className="text-3xl mr-4">{item.icon}</div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-foreground mb-2">
-                        {item.type}
-                      </h3>
-                      <p className="text-muted-foreground">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          </div> */}
-
-          <RelationshipProgramCards />
-
-          {/* Common Issues Section */}
-          {/* <div className="bg-brand-yellow/10 rounded-3xl p-8 md:p-12 mb-16">
-            <h2 className="text-3xl font-bold text-foreground text-center mb-8">
-              Common Relationship Challenges We Address
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  icon: "💬",
-                  title: "Communication Issues",
-                  description:
-                    "Learn to express yourself clearly and listen effectively",
-                },
-                {
-                  icon: "🤝",
-                  title: "Trust & Betrayal",
-                  description:
-                    "Rebuild trust and heal from relationship wounds",
-                },
-                {
-                  icon: "⚖️",
-                  title: "Conflict Resolution",
-                  description: "Develop healthy ways to handle disagreements",
-                },
-                {
-                  icon: "❤️",
-                  title: "Intimacy & Connection",
-                  description: "Strengthen emotional and physical bonds",
-                },
-                {
-                  icon: "📅",
-                  title: "Life Transitions",
-                  description: "Navigate major changes together as a team",
-                },
-                {
-                  icon: "👨‍👩‍👧‍👦",
-                  title: "Parenting Challenges",
-                  description: "Unite in your parenting approach and decisions",
-                },
-              ].map((issue, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-orange-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl">{issue.icon}</span>
-                  </div>
-                  <h3 className="font-semibold text-foreground mb-2">
-                    {issue.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm">
-                    {issue.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div> */}
+          <FlipCardGrid
+            title={"Core Programs for Relationships"}
+            programs={relationshipPrograms}
+          />
 
           {/* Contact Form */}
           <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -239,7 +195,9 @@ const Relationship = () => {
         </div>
       </section>
 
-      <Footer />
+      <div className="py-10">
+        <Footer />
+      </div>
     </div>
   );
 };

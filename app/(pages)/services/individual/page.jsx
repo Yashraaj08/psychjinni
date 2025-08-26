@@ -1,29 +1,76 @@
 "use client";
 
 import ContactForm from "@/components/ContactForm";
+import FlipCardGrid from "@/components/FilpCard";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import IndividualProgramFlipCards from "@/components/IndividualProgramCards";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 
 const Individual = () => {
-  const therapyTypes = [
-    "Cognitive Behavioral Therapy (CBT)",
-    "Dialectical Behavior Therapy (DBT)",
-    "Mindfulness-Based Therapy",
-    "Trauma-Informed Care",
-    "Solution-Focused Brief Therapy",
-    "Psychodynamic Therapy",
-  ];
-
-  const conditions = [
-    { name: "Anxiety Disorders", icon: "😰" },
-    { name: "Depression", icon: "💙" },
-    { name: "PTSD & Trauma", icon: "🌟" },
-    { name: "Stress Management", icon: "🧘‍♀️" },
-    { name: "Life Transitions", icon: "🌱" },
-    { name: "Self-Esteem Issues", icon: "💪" },
+  const individualPrograms = [
+    {
+      id: 1,
+      title: "Inner Compass: Self-Discovery & Identity Coaching",
+      tagline: "Find clarity in who you are and where you’re going.",
+      gradient: "from-amber-500 to-orange-600",
+      benefit:
+        "Many people feel lost in who they are. This program provides a safe space to rediscover identity, accept yourself, and design a path forward with confidence.",
+    },
+    {
+      id: 2,
+      title: "Resilience Reset: Emotional Stability & Mental Fitness",
+      tagline: "Balance your emotions. Build inner resilience.",
+      gradient: "from-blue-500 to-indigo-600",
+      benefit:
+        "Emotional instability often leads to burnout and strained relationships. This program strengthens emotional balance, resilience, and everyday calm.",
+    },
+    {
+      id: 3,
+      title: "Healing Heart: Grief & Loss Recovery",
+      tagline: "Finding light in the shadows of loss.",
+      gradient: "from-rose-500 to-pink-600",
+      benefit:
+        "Grief is deeply personal and often isolating. This program offers compassionate guidance through loss, helping individuals find healing and renewed strength.",
+    },
+    {
+      id: 4,
+      title: "Strength in Silence: Loneliness & Connection Coaching",
+      tagline: "Because everyone deserves to feel seen and heard.",
+      gradient: "from-emerald-500 to-teal-600",
+      benefit:
+        "Sometimes people just need someone to truly listen. This program creates connection, trust, and pathways to meaningful relationships.",
+    },
+    {
+      id: 5,
+      title: "Mind Uncluttered: Thought & Sleep Reset Program",
+      tagline: "Quiet the mind. Rest the body. Reset the spirit.",
+      gradient: "from-purple-500 to-violet-600",
+      benefit:
+        "Overthinking and sleepless nights drain energy and clarity. This program helps individuals reset their minds, restore sleep, and regain focus.",
+    },
+    {
+      id: 6,
+      title: "Cultural Harmony: Identity & Belonging Coaching",
+      tagline: "Finding your balance between cultures and expectations.",
+      gradient: "from-teal-500 to-cyan-600",
+      benefit:
+        "Cultural differences and family pressures often create identity struggles. This program helps individuals embrace uniqueness while staying rooted in belonging.",
+    },
+    {
+      id: 7,
+      title: "Life Pathways: Career & Purpose Alignment",
+      tagline: "Create a career that fits your life, not the other way around.",
+      gradient: "from-indigo-500 to-blue-600",
+      benefit:
+        "Careers often shape identity and self-worth. This program helps individuals find clarity, overcome blocks, and build meaningful career paths.",
+    },
+    {
+      id: 8,
+      title: "Self-Leadership Mastery: Becoming Your Own Guide",
+      tagline: "Lead yourself first—the rest will follow.",
+      gradient: "from-orange-500 to-red-600",
+      benefit:
+        "Lasting growth begins with self-leadership. This program teaches you to trust yourself, take ownership, and build consistency for long-term success.",
+    },
   ];
 
   return (
@@ -31,7 +78,8 @@ const Individual = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="-top-40 relative h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative flex items-center justify-center overflow-hidden h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh]">
+        {/* Background Image with Overlay */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url(/individual-hero.jpg)" }}
@@ -39,20 +87,12 @@ const Individual = () => {
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
 
-        <div className="top-30 relative z-10 text-center text-white px-4">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Individual Growth <br />& Emotional Wellness
+        {/* Text Content */}
+        <div className="relative z-10 text-center text-white px-4 sm:px-6 md:px-8">
+          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-snug sm:leading-tight">
+            Individual Growth <br className="hidden sm:block" /> & Emotional
+            Wellness
           </h1>
-          {/* <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
-            Personalized mental health care tailored to your unique journey
-          </p>
-          <Button
-            variant="secondary"
-            size="lg"
-            className="bg-orange-400 hover:bg-orange-500/90 text-white"
-          >
-            Start Your Journey
-          </Button> */}
         </div>
       </section>
 
@@ -80,88 +120,13 @@ const Individual = () => {
                 Every journey is unique, and our programs honour that
                 uniqueness.
               </p>
-              {/* <Button
-                variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-white"
-              >
-                Book a Consultation
-              </Button> */}
             </div>
-
-            {/* <div>
-              <h3 className="text-2xl font-bold text-foreground mb-6">
-                Therapy Approaches We Use:
-              </h3>
-              <div className="grid grid-cols-1 gap-3">
-                {therapyTypes.map((type, index) => (
-                  <Card key={index} className="p-4 bg-white shadow-soft">
-                    <div className="flex items-center">
-                      <div className="w-2 h-2 bg-orange-400 rounded-full mr-3"></div>
-                      <span className="text-foreground font-medium">
-                        {type}
-                      </span>
-                    </div>
-                  </Card>
-                ))}
-              </div>
-            </div> */}
           </div>
 
-          {/* Conditions We Treat */}
-          {/* <div className="mb-16">
-            <h2 className="text-3xl font-bold text-foreground text-center mb-12">
-              Conditions We Specialize In
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {conditions.map((condition, index) => (
-                <Card
-                  key={index}
-                  className="p-6 bg-white shadow-soft text-center hover:shadow-medium transition-shadow"
-                >
-                  <div className="text-4xl mb-4">{condition.icon}</div>
-                  <h3 className="text-lg font-semibold text-foreground">
-                    {condition.name}
-                  </h3>
-                </Card>
-              ))}
-            </div>
-          </div> */}
-
-          {/* Process Section */}
-          {/* <div className="bg-primary rounded-3xl p-8 md:p-12 mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">
-              How Our Process Works
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                {
-                  title: "Initial Assessment",
-                  description:
-                    "We start with a comprehensive assessment to understand your unique needs and goals.",
-                },
-                {
-                  title: "Personalized Plan",
-                  description:
-                    "Together, we create a tailored treatment plan that aligns with your specific circumstances.",
-                },
-                {
-                  title: "Ongoing Support",
-                  description:
-                    "Regular sessions and continuous support to help you achieve lasting positive change.",
-                },
-              ].map((step, idx) => (
-                <div key={idx} className="text-center text-white">
-                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold">{idx + 1}</span>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
-                  <p className="text-white/90">{step.description}</p>
-                </div>
-              ))}
-            </div>
-          </div> */}
-
-          <IndividualProgramFlipCards />
+          <FlipCardGrid
+            title={"Core Programs for Individuals"}
+            programs={individualPrograms}
+          />
 
           {/* Contact Form */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -214,7 +179,9 @@ const Individual = () => {
         </div>
       </section>
 
-      <Footer />
+      <div className="py-10">
+        <Footer />
+      </div>
     </div>
   );
 };

@@ -6,11 +6,18 @@ import { motion } from "framer-motion";
 
 const ContactUs = () => {
   return (
-    <div className="min-h-screen">
+    <div
+      className="min-h-screen"
+      style={{
+        background:
+          "linear-gradient(135deg, #a8c0ff 0%, #cfd9ff 30%, #e0c3fc 60%, #8ec5fc 100%)",
+      }}
+    >
       <Header />
 
       {/* Hero Section */}
-      <section className="-top-40 relative min-h-[60vh] flex items-center overflow-hidden">
+      <section className="-top-40 relative flex items-center overflow-hidden h-[50vh] sm:h-[60vh] md:h-[60vh] lg:h-[60vh]">
+        {/* Background Image with Overlay */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url(/contact-hero.jpg)" }}
@@ -18,12 +25,13 @@ const ContactUs = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/60"></div>
         </div>
 
-        <div className="top-30 relative z-10 container mx-auto px-4">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+        {/* Text Content */}
+        <div className="top-10 relative z-10 container mx-auto px-4 sm:px-6 md:px-8">
+          <div className="max-w-2xl md:max-w-3xl">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-snug sm:leading-tight">
               Contact Us
             </h1>
-            <p className="text-xl text-white/90 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed">
               Ready to start your mental health journey? We're here to help you
               take the first step towards healing and growth.
             </p>
@@ -122,7 +130,11 @@ const ContactUs = () => {
         </div>
       </section>
 
-      <Footer />
+      <div className="py-10">
+        <div className="py-10">
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 };

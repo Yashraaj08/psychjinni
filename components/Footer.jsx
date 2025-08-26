@@ -17,7 +17,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-primary text-white mx-4 sm:mx-8 lg:mx-20 my-10 rounded-lg">
+    <footer className="bg-primary text-white mx-4 sm:mx-8 lg:mx-20 rounded-lg">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
         {/* Top Section */}
         <div className="flex flex-col lg:flex-row justify-between gap-10">
@@ -30,7 +30,7 @@ const Footer = () => {
             </div>
             <p className="text-white/80 mb-6 leading-relaxed text-sm sm:text-base">
               Empowering minds to heal through professional mental health
-              services, therapy, and wellness programs designed for individuals,
+              services, coaching, and wellness programs designed for individuals,
               corporates, and educational institutions.
             </p>
             <div className="flex space-x-4">

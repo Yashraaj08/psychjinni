@@ -20,9 +20,17 @@ export default function ContentHub() {
   };
 
   return (
-    <div>
-      <Header />
-      <div className="flex flex-col items-center justify-center min-h-screen px-6 bg-gradient-to-br from-gray-50 to-gray-100 text-center">
+    <div
+      className="min-h-screen -mt-20"
+      style={{
+        background:
+          "linear-gradient(135deg, #a8c0ff 0%, #cfd9ff 30%, #e0c3fc 60%, #8ec5fc 100%)",
+      }}
+    >
+      <div className="pt-20">
+        <Header />
+      </div>
+      <div className="flex flex-col items-center justify-center min-h-screen px-6 text-center">
         <div className="animate-bounce text-6xl mb-4">📚</div>
 
         <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
@@ -42,6 +50,7 @@ export default function ContentHub() {
               placeholder="Enter your email to get notified"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              className={"bg-white border-primary"}
             />
             <Button className="w-full" onClick={handleNotify} disabled={!email}>
               Notify Me
@@ -56,12 +65,14 @@ export default function ContentHub() {
         <Button
           variant="ghost"
           onClick={() => router.push("/")}
-          className="mt-10 text-gray-700 hover:text-black border border-gray-700"
+          className="mt-10 bg-white text-gray-700 hover:text-black border border-gray-700"
         >
           ← Back to Home
         </Button>
       </div>
-      <Footer />
+      <div className="py-10">
+        <Footer />
+      </div>
     </div>
   );
 }

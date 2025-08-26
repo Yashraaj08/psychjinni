@@ -27,7 +27,9 @@ export default function Home() {
 
       {/* <ContactForm /> */}
 
-      <Footer />
+        <div className="py-10">
+<Footer />
+      </div>
     </div>
   );
 }

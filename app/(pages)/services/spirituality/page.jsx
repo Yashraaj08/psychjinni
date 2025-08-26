@@ -1,41 +1,75 @@
 "use client";
 
 import ContactForm from "@/components/ContactForm";
+import FlipCardGrid from "@/components/FilpCard";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 
-const Relationship = () => {
-  const services = [
-    "Couples Therapy",
-    "Premarital Counseling",
-    "Family Therapy",
-    "Communication Skills Training",
-    "Conflict Resolution",
-    "Intimacy & Connection Building",
-  ];
-
-  const relationshipTypes = [
+const Spirituality = () => {
+  const spiritualPrograms = [
     {
-      type: "Romantic Couples",
-      description: "Strengthen your bond and resolve conflicts",
-      icon: "💕",
+      id: 1,
+      title: "InnerLight: Guided Meditation & Mindfulness Coaching",
+      tagline: "Reconnect with your present, find clarity, and reduce stress.",
+      benefit:
+        "Developing mindfulness empowers you to respond rather than react, promoting emotional stability and personal fulfillment.",
+      gradient: "from-pink-300 to-purple-400", // soft spiritual vibe
     },
     {
-      type: "Married Couples",
-      description: "Navigate marriage challenges together",
-      icon: "💑",
+      id: 2,
+      title: "SoulPath: Life Purpose & Spiritual Alignment",
+      tagline: "Discover your deeper meaning and align with your values.",
+      benefit:
+        "Clarifying your purpose cultivates motivation, inner peace, and personal satisfaction.",
+      gradient: "from-purple-400 to-indigo-500",
     },
     {
-      type: "Families",
-      description: "Improve family dynamics and communication",
-      icon: "👨‍👩‍👧‍👦",
+      id: 3,
+      title: "GriefEase: Mindful Healing & Loss Recovery",
+      tagline: "Transform loss into growth with compassionate guidance.",
+      benefit:
+        "Mindful grief processing allows healing, emotional release, and renewed strength in everyday life.",
+      gradient: "from-rose-300 to-pink-500",
     },
     {
-      type: "Parent-Child",
-      description: "Build stronger parent-child relationships",
-      icon: "👪",
+      id: 4,
+      title: "PresenceMaster: Mindful Emotional Regulation",
+      tagline: "Stay centered even in life’s most challenging moments.",
+      benefit:
+        "Mastering emotional regulation improves personal well-being, reduces anxiety, and enhances decision-making.",
+      gradient: "from-teal-300 to-emerald-400",
+    },
+    {
+      id: 5,
+      title: "ZenWork: Mindfulness in Daily Life & Work",
+      tagline: "Bring calm and focus into your everyday routines.",
+      benefit:
+        "Mindful living promotes sustained focus, reduces burnout, and creates a harmonious daily rhythm.",
+      gradient: "from-amber-300 to-yellow-500",
+    },
+    {
+      id: 6,
+      title: "HeartCenter: Compassion & Self-Love Practices",
+      tagline: "Cultivate inner kindness and stronger emotional connection.",
+      benefit:
+        "Developing self-compassion strengthens emotional resilience, reduces self-criticism, and promotes inner peace.",
+      gradient: "from-pink-400 to-red-500",
+    },
+    {
+      id: 7,
+      title: "AwakenFlow: Mind-Body Awareness & Energy Alignment",
+      tagline: "Tune into your body, mind, and subtle energies.",
+      benefit:
+        "Enhancing mind-body awareness supports holistic well-being, vitality, and emotional equilibrium.",
+      gradient: "from-indigo-300 to-violet-500",
+    },
+    {
+      id: 8,
+      title: "ClarityCompass: Decision-Making & Mindful Choices",
+      tagline: "Make choices aligned with values and long-term goals.",
+      benefit:
+        "Mindful decision-making increases confidence, reduces regret, and fosters purposeful living.",
+      gradient: "from-cyan-300 to-blue-500",
     },
   ];
 
@@ -44,7 +78,8 @@ const Relationship = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="-top-40 relative h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative flex items-center justify-center overflow-hidden h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh]">
+        {/* Background Image with Overlay */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url(/relationship-hero.jpg)" }}
@@ -52,9 +87,10 @@ const Relationship = () => {
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
 
-        <div className="top-30 relative z-10 text-center text-white px-4">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Spirituality & Mindfulness
+        {/* Text Content */}
+        <div className="relative z-10 text-center text-white px-4 sm:px-6 md:px-8">
+          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-snug sm:leading-tight">
+            Spirituality <br className="hidden sm:block" /> & Mindfulness
           </h1>
         </div>
       </section>
@@ -62,7 +98,7 @@ const Relationship = () => {
       {/* Content Section */}
       <section className="-mt-20 px-4">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          <div className="mb-16">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 Because inner balance creates outer clarity.
@@ -84,114 +120,13 @@ const Relationship = () => {
                 inner peace cultivation, conscious decision-making, and stress
                 reduction.
               </p>
-              <Button
-                variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-white"
-              >
-                Learn About Our Approach
-              </Button>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold text-foreground mb-6">
-                Our Relationship Services:
-              </h3>
-              <div className="grid grid-cols-1 gap-3">
-                {services.map((service, index) => (
-                  <Card key={index} className="p-4 bg-white shadow-soft">
-                    <div className="flex items-center">
-                      <div className="w-2 h-2 bg-orange-400 rounded-full mr-3"></div>
-                      <span className="text-foreground font-medium">
-                        {service}
-                      </span>
-                    </div>
-                  </Card>
-                ))}
-              </div>
             </div>
           </div>
 
-          {/* Relationship Types */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-foreground text-center mb-12">
-              We Support All Types of Relationships
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {relationshipTypes.map((item, index) => (
-                <Card
-                  key={index}
-                  className="p-6 bg-white shadow-soft hover:shadow-medium transition-shadow"
-                >
-                  <div className="flex items-start">
-                    <div className="text-3xl mr-4">{item.icon}</div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-foreground mb-2">
-                        {item.type}
-                      </h3>
-                      <p className="text-muted-foreground">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          </div>
-
-          {/* Common Issues Section */}
-          <div className="bg-brand-yellow/10 rounded-3xl p-8 md:p-12 mb-16">
-            <h2 className="text-3xl font-bold text-foreground text-center mb-8">
-              Common Relationship Challenges We Address
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  icon: "💬",
-                  title: "Communication Issues",
-                  description:
-                    "Learn to express yourself clearly and listen effectively",
-                },
-                {
-                  icon: "🤝",
-                  title: "Trust & Betrayal",
-                  description:
-                    "Rebuild trust and heal from relationship wounds",
-                },
-                {
-                  icon: "⚖️",
-                  title: "Conflict Resolution",
-                  description: "Develop healthy ways to handle disagreements",
-                },
-                {
-                  icon: "❤️",
-                  title: "Intimacy & Connection",
-                  description: "Strengthen emotional and physical bonds",
-                },
-                {
-                  icon: "📅",
-                  title: "Life Transitions",
-                  description: "Navigate major changes together as a team",
-                },
-                {
-                  icon: "👨‍👩‍👧‍👦",
-                  title: "Parenting Challenges",
-                  description: "Unite in your parenting approach and decisions",
-                },
-              ].map((issue, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-orange-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl">{issue.icon}</span>
-                  </div>
-                  <h3 className="font-semibold text-foreground mb-2">
-                    {issue.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm">
-                    {issue.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
+          <FlipCardGrid
+            title="Core Programs for Spirituality & Mindfulness"
+            programs={spiritualPrograms}
+          />
 
           {/* Contact Form */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -244,9 +179,11 @@ const Relationship = () => {
         </div>
       </section>
 
-      <Footer />
+      <div className="py-10">
+        <Footer />
+      </div>
     </div>
   );
 };
 
-export default Relationship;
+export default Spirituality;

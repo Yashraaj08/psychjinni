@@ -1,20 +1,52 @@
 "use client";
 
 import ContactForm from "@/components/ContactForm";
-import CorporatePrograms from "@/components/CorporateProgramCards";
+import FlipCardGrid from "@/components/FilpCard";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 
 const Corporate = () => {
-  const features = [
-    "Employee Assistance Programs (EAP)",
-    "Workplace Mental Health Workshops",
-    "Leadership Training on Mental Health",
-    "Crisis Intervention Support",
-    "Stress Management Programs",
-    "Team Building & Communication",
+  const corporatePrograms = [
+    {
+      id: 1,
+      title: "The Resilient Leader Program",
+      tagline: "From managers to visionaries—unleash authentic leadership.",
+      gradient: "from-amber-500 to-orange-600",
+      benefit:
+        "Strong leadership builds retention and reduces dependency on external hiring. By developing middle-level managers from within, you create a sustainable leadership pipeline and ensure long-term organizational growth.",
+    },
+    {
+      id: 2,
+      title: "Synergy: High-Performance Team Coaching",
+      tagline: "Better collaboration. Smarter outcomes.",
+      gradient: "from-blue-500 to-purple-600",
+      benefit:
+        "A team that communicates well saves time, reduces conflicts, and delivers stronger results. This program boosts engagement while identifying emerging team leaders who can be shaped into strong mid-level managers.",
+    },
+    {
+      id: 3,
+      title: "Work-Life Balance & Well-being Series",
+      tagline: "Healthy employees. Thriving workplaces.",
+      gradient: "from-emerald-500 to-teal-600",
+      benefit:
+        "Employee well-being directly impacts productivity, retention, and workplace culture. By equipping staff with mental health tools, you minimize absenteeism, improve morale, and create healthier workplaces.",
+    },
+    {
+      id: 4,
+      title: "Culture Catalyst: Organizational Development Program",
+      tagline: "Create workplaces where people feel safe, valued, and engaged.",
+      gradient: "from-rose-500 to-pink-600",
+      benefit:
+        "A strong culture reduces turnover, attracts top talent, and prevents conflicts. By embedding psychological safety and inclusivity, employees perform better, and HR leaders spend less time firefighting issues.",
+    },
+    {
+      id: 5,
+      title: "Agility & Innovation Coaching",
+      tagline: "Turning change into opportunity.",
+      gradient: "from-teal-400 to-sky-500",
+      benefit:
+        "In a fast-changing world, adaptability is a key survival skill. This program equips employees to embrace change with confidence and prepares future mid-level managers to lead with innovation and resilience.",
+    },
   ];
 
   return (
@@ -22,7 +54,8 @@ const Corporate = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className=" -top-30 relative h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative flex items-center justify-center overflow-hidden h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh]">
+        {/* Background Image with Overlay */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url(/corporate-hero.jpg)" }}
@@ -30,21 +63,12 @@ const Corporate = () => {
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
 
-        <div className="top-30 relative z-10 text-center text-white px-4">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Corporate Growth <br /> & Mental Fitness Programs
+        {/* Text Content */}
+        <div className="relative z-10 text-center text-white px-4 sm:px-6 md:px-8">
+          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-snug sm:leading-tight">
+            Corporate Growth <br className="hidden sm:block" /> & Mental Fitness
+            Programs
           </h1>
-          {/* <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
-            Building healthier workplaces through comprehensive mental health
-            support
-          </p>
-          <Button
-            variant="secondary"
-            size="lg"
-            className="bg-orange-400 hover:bg-orange-500/90 text-white cursor-pointer"
-          >
-            Get Started Today
-          </Button> */}
         </div>
       </section>
 
@@ -76,53 +100,13 @@ const Corporate = () => {
                 , our programs are designed to transform challenges into growth
                 opportunities.
               </p>
-              {/* <Button
-                variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-white"
-              >
-                Download Our Corporate Brochure
-              </Button> */}
             </div>
           </div>
-          {/* <div className="pb-20 px-4">
-            <h3 className="text-2xl font-bold text-foreground mb-6">
-              Our Services Include:
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {features.map((feature, index) => (
-                <Card key={index} className="p-4 bg-white shadow-soft">
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 bg-orange-400 rounded-full mr-3"></div>
-                    <span className="text-foreground font-medium">
-                      {feature}
-                    </span>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          </div> */}
 
-          <CorporatePrograms />
-
-          {/* Stats Section */}
-          <div className="bg-primary rounded-3xl p-8 md:p-12 mb-16">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-white">
-              <div>
-                <div className="text-4xl md:text-5xl font-bold mb-2">85%</div>
-                <p className="text-white/90">
-                  Improvement in Employee Satisfaction
-                </p>
-              </div>
-              <div>
-                <div className="text-4xl md:text-5xl font-bold mb-2">40%</div>
-                <p className="text-white/90">Reduction in Sick Days</p>
-              </div>
-              <div>
-                <div className="text-4xl md:text-5xl font-bold mb-2">95%</div>
-                <p className="text-white/90">Client Retention Rate</p>
-              </div>
-            </div>
-          </div>
+          <FlipCardGrid
+            title={"Our Core Corporate Programs"}
+            programs={corporatePrograms}
+          />
 
           {/* Contact Form */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -164,7 +148,9 @@ const Corporate = () => {
         </div>
       </section>
 
-      <Footer />
+      <div className="py-10">
+        <Footer />
+      </div>
     </div>
   );
 };
