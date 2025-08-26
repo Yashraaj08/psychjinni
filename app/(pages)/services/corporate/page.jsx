@@ -54,7 +54,7 @@ const Corporate = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative flex items-center justify-center overflow-hidden h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh]">
+      <section className="-top-40 relative flex items-center justify-center overflow-hidden h-[50vh] sm:h-[60vh] md:h-[60vh] lg:h-[60vh]">
         {/* Background Image with Overlay */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -64,7 +64,7 @@ const Corporate = () => {
         </div>
 
         {/* Text Content */}
-        <div className="relative z-10 text-center text-white px-4 sm:px-6 md:px-8">
+        <div className="top-20 relative z-10 text-center text-white px-4 sm:px-6 md:px-8">
           <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-snug sm:leading-tight">
             Corporate Growth <br className="hidden sm:block" /> & Mental Fitness
             Programs
@@ -73,8 +73,8 @@ const Corporate = () => {
       </section>
 
       {/* Content Section */}
-      <section className="pb-20 px-4">
-        <div className="container mx-auto max-w-6xl">
+      <section className="-mt-20 pb-20 px-4">
+        <div className="mx-auto max-w-6xl">
           <div className="mb-16">
             <div>
               <h2 className="text-center text-3xl md:text-4xl font-bold text-foreground mb-6">
