@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { Star } from "lucide-react";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 export const TestimonialsCards = ({
@@ -80,7 +81,7 @@ export const TestimonialsCards = ({
             {/* Avatar */}
             <div className="flex justify-center mb-4">
               <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center">
-                <img
+                <Image
                   src={item.image}
                   alt={item.image}
                 />
