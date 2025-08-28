@@ -12,6 +12,7 @@ export default function Services() {
     {
       id: "01",
       title: "CORPORATES",
+      image: "/home/corporate_home.mov",
       description:
         "Corporate wellness redefined—enabling teams to perform at their best with resilience, harmony, and maximum performance.",
       link: "/services/corporate",
@@ -19,6 +20,7 @@ export default function Services() {
     {
       id: "02",
       title: "EDUCATIONAL",
+      image: "/home/educational_home.mov",
       description:
         "Education wellness programs that construct healthier, more concentrated, and emotionally nurturing learning environments.",
       link: "/services/educational",
@@ -26,6 +28,7 @@ export default function Services() {
     {
       id: "03",
       title: "INDIVIDUALS",
+      image: "/home/individual_home.mov",
       description:
         "Each journey is individual—our programs lead you to heal, grow, and flourish at your own pace.",
       link: "/services/individual",
@@ -33,13 +36,15 @@ export default function Services() {
     {
       id: "04",
       title: "RELATIONSHIP",
+      image: "/home/relationship_home.mov",
       description:
         "Specialized programs for couples and families to enhance communication, deepen relationships, and develop healthy, supportive relationships.",
       link: "/services/relationship",
     },
     {
       id: "05",
-      title: "Spirituality & Mindfulness",
+      title: "SPIRITUALITY & MINDFULLNESS",
+      image: "/home/spirituality_home.mov",
       description:
         "Specialized programs for couples and families to enhance communication, deepen relationships, and develop healthy, supportive relationships.",
       link: "/services/spirituality",
@@ -47,41 +52,33 @@ export default function Services() {
   ];
 
   return (
-    <div
-      className="min-h-screen"
-      style={{
-        background:
-          "linear-gradient(135deg, #a8c0ff 0%, #cfd9ff 30%, #e0c3fc 60%, #8ec5fc 100%)",
-      }}
-    >
+    <div className="min-h-screen bg-[#fafafa]">
       <Header />
 
-      <section className="-top-40 relative flex items-center overflow-hidden h-[50vh] sm:h-[60vh] md:h-[60vh] lg:h-[60vh]">
-        {/* Background Image with Overlay */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url(/contact-hero.jpg)" }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/60"></div>
+      {/* Hero Section */}
+      <section className="top-10 relative flex items-center justify-center sm:justify-end overflow-hidden h-[60vh]">
+        {/* Background Video with Overlay */}
+        <div className="absolute inset-0 w-full h-full">
+          <video
+            className="w-full sm:w-1/2 h-full object-contain"
+            src={"/home/approach.mov"} // your .mp4/.mov file
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/80 sm:bg-gradient-to-r sm:from-primary/20 sm:to-primary/60 lg:bg-gradient-to-r lg:from-primary/10 lg:to-primary/90"></div>
         </div>
 
         {/* Text Content */}
-        <div className="top-20 relative z-10 container mx-auto px-4 sm:px-6 md:px-8">
-          <div className="max-w-2xl md:max-w-3xl">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-snug sm:leading-tight">
-              Our Approach
-            </h1>
-            <p className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed">
-              Your mind is unique, and so is the healing process. We blend
-              creativity and compassion to design programs that enable you to
-              develop, thrive, and live on your terms at{" "}
-              <span className="font-semibold">PsychJinni</span>.
-            </p>
-          </div>
+        <div className="relative z-10 text-center sm:text-right px-4 sm:px-6 md:px-8">
+          <h1 className="text-4xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-snug sm:leading-tight">
+            Our Approach
+          </h1>
         </div>
       </section>
 
-      <div className="-mt-20 bg-yellow-400 rounded-2xl p-6 max-w-5xl mx-auto">
+      <div className="mt-20 bg-[#F36B1D]/80  rounded-2xl p-6 max-w-5xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {services.map((service, index) => (
             <Link
@@ -92,19 +89,31 @@ export default function Services() {
                 ${index === services.length - 1 ? "sm:col-span-2" : ""}
               `}
             >
-              <Card className="relative border border-orange-200 shadow-md hover:shadow-lg transition-shadow rounded-xl cursor-pointer h-full flex">
-                <CardContent className="flex flex-col justify-between p-4 w-full">
-                  <div>
-                    <h3 className="text-2xl font-bold text-foreground mb-2">
+              <Card className="relative border border-orange-200 shadow-md hover:shadow-lg transition-shadow rounded-xl cursor-pointer h-full">
+                <CardContent className="flex flex-col md:flex-row items-center justify-between gap-4 p-6 w-full">
+                  {/* Left Section - Title + Description */}
+                  <div className="flex-1 text-center sm:text-left">
+                    <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2">
                       {service.title}
                     </h3>
-                    <p className="text-muted-foreground text-lg">
+                    <p className="text-slate-800 text-sm sm:text-base md:text-lg">
                       {service.description}
                     </p>
                   </div>
-                  <span className="absolute top-2 right-4 text-black font-extrabold text-5xl">
-                    {service.id}
-                  </span>
+
+                  {/* Right Section - Video */}
+                  {service.image && (
+                    <div className="flex-shrink-0 flex justify-center items-center">
+                      <video
+                        src={service.image}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 object-cover"
+                      />
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             </Link>

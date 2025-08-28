@@ -78,25 +78,31 @@ const Spirituality = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="-top-40 relative flex items-center justify-center overflow-hidden h-[50vh] sm:h-[60vh] md:h-[60vh] lg:h-[60vh]">
-        {/* Background Image with Overlay */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url(/relationship-hero.jpg)" }}
-        >
-          <div className="absolute inset-0 bg-black/50"></div>
+
+      <section className="top-10 relative flex items-center justify-center sm:justify-end overflow-hidden h-[60vh]">
+        {/* Background Video with Overlay */}
+        <div className="absolute inset-0 w-full h-full">
+          <video
+            className="w-full sm:w-1/2 h-full object-contain"
+            src={"/home/spirituality-inside.mov"} // your .mp4/.mov file
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/80 sm:bg-gradient-to-r sm:from-primary/20 sm:to-primary/60 lg:bg-gradient-to-r lg:from-primary/10 lg:to-primary/90"></div>
         </div>
 
         {/* Text Content */}
-        <div className="top-20 relative z-10 text-center text-white px-4 sm:px-6 md:px-8">
-          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-snug sm:leading-tight">
+        <div className="relative z-10 text-center sm:text-right px-4 sm:px-6 md:px-8">
+          <h1 className="text-4xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-snug sm:leading-tight">
             Spirituality <br className="hidden sm:block" /> & Mindfulness
           </h1>
         </div>
       </section>
 
       {/* Content Section */}
-      <section className="-mt-20 px-4">
+      <section className="mt-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="mb-16">
             <div>

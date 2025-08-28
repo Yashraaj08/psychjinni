@@ -80,9 +80,10 @@ export const TestimonialsCards = ({
             {/* Avatar */}
             <div className="flex justify-center mb-4">
               <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-xl">
-                  {item.name[0]}
-                </span>
+                <img
+                  src={item.image}
+                  className="text-white text-2xl font-bold"
+                />
               </div>
             </div>
 
@@ -109,6 +110,10 @@ export const TestimonialsCards = ({
             <h3 className="text-lg font-bold text-center text-foreground">
               {item.name}
             </h3>
+
+            <p className="text-xs text-center text-muted-foreground mb-2">
+              {item.location}
+            </p>
 
             {/* Testimonial Text */}
             <p className="text-muted-foreground text-center text-sm leading-relaxed px-4 mt-2">

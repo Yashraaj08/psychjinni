@@ -11,7 +11,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 
 export default function Home() {
   return (
-    <div className="relative w-full">
+    <div className="relative w-full #bg-[#C2E6FF]/40">
       {/* Navbar */}
       <Header />
       <HeroSection />
@@ -27,8 +27,8 @@ export default function Home() {
 
       {/* <ContactForm /> */}
 
-        <div className="py-10">
-<Footer />
+      <div className="py-10">
+        <Footer />
       </div>
     </div>
   );

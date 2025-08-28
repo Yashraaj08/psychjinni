@@ -30,7 +30,7 @@ export const Navbar = ({ children, className }) => {
     <motion.div
       ref={ref}
       // IMPORTANT: Change this to class of `fixed` if you want the navbar to be fixed
-      className={cn("mt-10 inset-x-0 top-10 z-40 w-full", className)}
+      className={cn("fixed inset-x-0 z-40 w-full", className)}
     >
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
@@ -44,25 +44,8 @@ export const Navbar = ({ children, className }) => {
 export const NavBody = ({ children, className, visible }) => {
   return (
     <div
-      // animate={{
-      //   backdropFilter: visible ? "blur(10px)" : "none",
-      //   boxShadow: visible
-      //     ? "0 0 24px rgba(34, 42, 53, 0.06), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.04), 0 0 4px rgba(34, 42, 53, 0.08), 0 16px 68px rgba(47, 48, 55, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset"
-      //     : "none",
-      //   width: visible ? "40%" : "100%",
-      //   y: visible ? 20 : 0,
-      // }}
-      // transition={{
-      //   type: "spring",
-      //   stiffness: 200,
-      //   damping: 50,
-      // }}
-      style={{
-        minWidth: "800px",
-      }}
       className={cn(
-        "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-lg bg-primary px-4 py-4 lg:flex",
-        visible && "bg-primary dark:bg-neutral-950/80",
+        "relative z-[60] mx-auto hidden w-full flex-row items-center justify-between self-start bg-primary px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32 py-4 lg:flex",
         className
       )}
     >
@@ -70,6 +53,7 @@ export const NavBody = ({ children, className, visible }) => {
     </div>
   );
 };
+
 
 export const NavItems = ({ items, className, onItemClick }) => {
   const [hovered, setHovered] = useState(null);
@@ -107,7 +91,7 @@ export const MobileNav = ({ children, className, visible }) => {
   return (
     <div
       className={cn(
-        "relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between bg-primary px-0 py-2 lg:hidden",
+        "relative z-50 mx-auto flex w-full flex-col items-center justify-between bg-primary sm:px-6 md:px-12 lg:px-20 xl:px-32 py-2 lg:hidden",
         visible && "bg-primary dark:bg-neutral-950/80",
         className
       )}

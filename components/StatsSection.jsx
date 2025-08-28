@@ -5,10 +5,10 @@ import { motion, useMotionValue, animate } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
 const stats = [
-  { value: 45, suffix: "+", label: "Tailored wellness sessions designed to support unique needs." },
-  { value: 32, suffix: "+", label: "Individuals empowered to heal, grow, and thrive." },
+  { value: 342, suffix: "+", label: "Tailored wellness sessions designed to support unique needs." },
+  { value: 600, suffix: "+", label: "Individuals empowered to heal, grow, and thrive." },
   { value: 89, suffix: "%", label: "Success rate in making mental health approachable and stigma-free." },
-  { value: 30, suffix: "+", label: "Moments of mindful connection, reflection, and self-discovery." },
+  { value: 213, suffix: "+", label: "Moments of mindful connection, reflection, and self-discovery." },
 ];
 
 function AnimatedCounter({ target, suffix }) {
@@ -44,12 +44,6 @@ export default function StatsSection() {
           From silence to strength, with PsychJinni
         </h2>
 
-        {/* Subtitle */}
-        {/* <p className="mt-4 text-sm sm:text-base text-blue-100 max-w-3xl mx-auto">
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-          when an unknown printer took a galley of type and standard dummy text ever since,
-          when an unknown printer took a galley of type
-        </p> */}
 
         {/* Stats */}
         <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-8">

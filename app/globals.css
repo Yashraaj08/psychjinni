@@ -93,7 +93,7 @@ img.transparent-gif {
   --gradient-wave: linear-gradient(
     180deg,
     hsl(var(--brand-blue)) 0%,
-    hsl(var(--brand-blue-dark)) 100%
+    #5664ff 100%
   );
 }
 

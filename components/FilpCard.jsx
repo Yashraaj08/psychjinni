@@ -2,54 +2,60 @@
 import { Card } from "@/components/ui/card";
 import { Sparkle, Quote } from "lucide-react";
 import { motion } from "framer-motion";
+import React from "react";
 
 const FlipCardGrid = ({ title, subtitle, programs }) => {
   return (
     <section className="pb-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 sm:mb-16">
           {title && (
-            <motion.h2
-              className="text-3xl md:text-4xl font-bold text-foreground mb-4"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
               {title}
-            </motion.h2>
+            </h2>
+          )}
+          {subtitle && (
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
+              {subtitle}
+            </p>
           )}
         </div>
 
-        {/* Flip Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+        {/* Flip Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 max-w-7xl mx-auto">
           {programs.map((program, index) => {
             const IconComponent = program.icon || Sparkle; // fallback
+
             return (
-              <motion.div
-                key={program.id}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <div className="flip-card w-full h-80 perspective-1000">
+              <div key={program.id}>
+                <div className="flip-card w-full h-[320px] sm:h-[360px] md:h-[380px] perspective-1000">
                   <div className="flip-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group hover:[transform:rotateY(180deg)]">
                     {/* Front */}
                     <Card className="absolute inset-0 flex flex-col items-center justify-center p-6 border-0 shadow-xl rounded-2xl bg-gradient-to-br from-card to-card/80 [backface-visibility:hidden] transition-transform duration-500 group-hover:scale-[1.02]">
-                      <div
-                        className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${
-                          program.gradient || "from-blue-500 to-indigo-600"
-                        } flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform`}
-                      >
-                        <IconComponent className="w-8 h-8 text-white" />
-                      </div>
-                      <h3 className="text-lg font-bold text-center text-foreground">
+                      {/* Video or Icon */}
+                      {program.video ? (
+                        <video
+                          src={program.video}
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-xl shadow-lg mb-4 object-cover"
+                        />
+                      ) : (
+                        <div
+                          className={`w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-2xl bg-gradient-to-br ${
+                            program.gradient || "from-blue-500 to-indigo-600"
+                          } flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform`}
+                        >
+                          <IconComponent className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+                        </div>
+                      )}
+
+                      <h3 className="text-base sm:text-lg md:text-xl font-bold text-center text-foreground">
                         {program.title}
                       </h3>
-                      <div className="absolute top-4 right-4 w-2 h-2 bg-primary/80 rounded-full animate-pulse" />
-                      <div className="absolute bottom-6 left-4 w-1.5 h-1.5 bg-primary/70 rounded-full animate-pulse delay-300" />
-                      <div className="absolute top-1/3 left-6 w-1 h-1 bg-primary/90 rounded-full animate-pulse delay-700" />
-                      <div className="absolute bottom-15 right-14 w-1.5 h-1.5 bg-primary/70 rounded-full animate-pulse delay-300" />
                     </Card>
 
                     {/* Back */}
@@ -59,26 +65,22 @@ const FlipCardGrid = ({ title, subtitle, programs }) => {
                       } absolute inset-0 p-6 border-0 flex flex-col justify-center items-center shadow-xl rounded-2xl [transform:rotateY(180deg)] [backface-visibility:hidden] text-white`}
                     >
                       <div>
-                        <p className="text-white font-bold text-lg mb-5 leading-snug">
+                        <p className="text-white font-bold text-base sm:text-lg md:text-xl mb-5 leading-snug">
                           {program.tagline}
                         </p>
                         <div className="bg-card/20 p-4 rounded-lg border border-primary/10 relative">
                           <div className="absolute right-0 bottom-0 w-10 h-10 rounded-full flex items-center justify-center">
                             <Quote className="text-white opacity-70" />
                           </div>
-                          <blockquote className="border-l-4 border-card rounded-md italic text-sm text-white leading-relaxed px-4 py-2">
+                          <blockquote className="border-l-4 border-card rounded-md italic text-xs sm:text-sm text-white leading-relaxed px-4 py-2">
                             {program.benefit}
                           </blockquote>
                         </div>
                       </div>
-
-                      <div className="absolute top-4 right-4 w-2 h-2 bg-card/80 rounded-full animate-pulse" />
-                      <div className="absolute bottom-6 left-4 w-1.5 h-1.5 bg-card/70 rounded-full animate-pulse delay-300" />
-                      <div className="absolute bottom-15 right-14 w-1.5 h-1.5 bg-card/70 rounded-full animate-pulse delay-300" />
                     </Card>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             );
           })}
         </div>
