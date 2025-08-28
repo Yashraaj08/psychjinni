@@ -144,19 +144,19 @@ const About = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {[
                   {
-                    image: "/testimonials/avatar_10.png",
+                    image: "/testimonials/Avatar_10.png",
                     name: "Dr. Sarah Johnson",
                     role: "Co-Founder & Clinical Director",
                     desc: "Licensed Clinical Psychologist with 15+ years of experience in trauma therapy and anxiety disorders.",
                   },
                   {
-                    image: "/testimonials/avatar_01.png",
+                    image: "/testimonials/Avatar_01.png",
                     name: "Dr. Michael Chen",
                     role: "Co-Founder & Research Director",
                     desc: "Licensed Marriage & Family Therapist specializing in couples therapy and family systems.",
                   },
                   {
-                    image: "/testimonials/avatar_02.png",
+                    image: "/testimonials/Avatar_02.png",
 
                     name: "Dr. Amanda Rodriguez",
                     role: "Senior Therapist",
