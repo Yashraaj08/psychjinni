@@ -82,7 +82,7 @@ export const TestimonialsCards = ({
               <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center">
                 <img
                   src={item.image}
-                  className="text-white text-2xl font-bold"
+                  alt={item.image}
                 />
               </div>
             </div>

@@ -168,10 +168,7 @@ const About = () => {
                   >
                     <div className="relative w-28 h-28 mx-auto mb-8">
                       <div className="w-28 h-28 bg-primary rounded-full flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-110 hover:rotate-6">
-                        <img
-                          src={member.image}
-                          className="text-white text-2xl font-bold"
-                        />
+                        <img src={member.image} alt={member.image} />
                       </div>
                     </div>
                     <h3 className="text-lg md:text-xl font-semibold text-foreground mb-2">
