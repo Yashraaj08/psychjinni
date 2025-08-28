@@ -12,7 +12,7 @@ const About = () => {
         {/* Background */}
         <div
           className="absolute inset-0 bg-contain bg-yellow-200/10 bg-no-repeat"
-          style={{ backgroundImage: "url(/corporate.gif)" }}
+          style={{ backgroundImage: "url(/Corporate.gif)" }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-primary/20 sm:from-primary/0 to-primary/60"></div>
         </div>
@@ -169,7 +169,12 @@ const About = () => {
                   >
                     <div className="relative w-28 h-28 mx-auto mb-8">
                       <div className="w-28 h-28 bg-primary rounded-full flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-110 hover:rotate-6">
-                        <Image src={member.image} alt={member.image} />
+                        <Image
+                          width={100}
+                          height={100}
+                          src={member.image}
+                          alt={member.image}
+                        />
                       </div>
                     </div>
                     <h3 className="text-lg md:text-xl font-semibold text-foreground mb-2">

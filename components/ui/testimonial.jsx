@@ -82,6 +82,8 @@ export const TestimonialsCards = ({
             <div className="flex justify-center mb-4">
               <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center">
                 <Image
+                width={100}
+                height={100}
                   src={item.image}
                   alt={item.image}
                 />
