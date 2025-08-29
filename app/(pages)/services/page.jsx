@@ -78,25 +78,23 @@ export default function Services() {
         </div>
       </section>
 
-      <div className="mt-20 bg-[#F36B1D]/80  rounded-2xl p-6 max-w-5xl mx-auto">
+        <div className="mt-20 bg-[#71722C]/50 rounded-2xl p-6 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {services.map((service, index) => (
             <Link
               key={service.id}
               href={service.link}
               passHref
-              className={`
-                ${index === services.length - 1 ? "sm:col-span-2" : ""}
-              `}
+              className={index === services.length - 1 ? "sm:col-span-2" : ""}
             >
               <Card className="relative border border-orange-200 shadow-md hover:shadow-lg transition-shadow rounded-xl cursor-pointer h-full">
                 <CardContent className="flex flex-col md:flex-row items-center justify-between gap-4 p-6 w-full">
                   {/* Left Section - Title + Description */}
                   <div className="flex-1 text-center sm:text-left">
-                    <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2">
+                    <h3 className="text-xl sm:text-2xl font-bold text-slate-500 mb-2">
                       {service.title}
                     </h3>
-                    <p className="text-slate-800 text-sm sm:text-base md:text-lg">
+                    <p className="text-slate-600 text-sm sm:text-base md:text-lg">
                       {service.description}
                     </p>
                   </div>
