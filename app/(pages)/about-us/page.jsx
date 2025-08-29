@@ -8,18 +8,18 @@ const About = () => {
   return (
     <div className="min-h-screen bg-[#fafafa]">
       <Header />
-      <section className="relative flex items-center justify-center sm:justify-end overflow-hidden h-[40vh] sm:h-[40vh] md:h-[50vh] lg:h-[60vh]">
+      <section className="relative flex items-center justify-center sm:justify-end overflow-hidden  h-[60vh]">
         {/* Background */}
         <div
           className="absolute inset-0 bg-contain bg-yellow-200/10 bg-no-repeat"
           style={{ backgroundImage: "url(/Corporate.gif)" }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/20 sm:from-primary/0 to-primary/60"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/80 sm:bg-gradient-to-r sm:from-primary/20 sm:to-primary/60 lg:bg-gradient-to-r lg:from-primary/10 lg:to-primary/90"></div>
         </div>
 
         {/* Text Content */}
         <div className="relative z-10 text-center sm:text-right px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
-          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-black leading-snug sm:leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-snug sm:leading-tight">
             About Us
           </h1>
         </div>

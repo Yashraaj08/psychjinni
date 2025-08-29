@@ -72,7 +72,7 @@ export default function Services() {
 
         {/* Text Content */}
         <div className="relative z-10 text-center sm:text-right px-4 sm:px-6 md:px-8">
-          <h1 className="text-4xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-snug sm:leading-tight">
+          <h1 className="text-4xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-snug text-white italic sm:leading-tight">
             Our Approach
           </h1>
         </div>

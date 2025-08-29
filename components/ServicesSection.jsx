@@ -49,7 +49,7 @@ export default function ServicesSection() {
     <section className="py-12 bg-[#fafafa]">
       {/* Heading */}
       <div className="text-center mb-8">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-[#F36B1D]">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-[#71722C]/70">
           Our Approach
         </h2>
         <p className="mt-2 max-w-2xl mx-auto text-slate-700 text-sm sm:text-base mb-4">
@@ -66,7 +66,7 @@ export default function ServicesSection() {
       </div>
 
       {/* Services Grid */}
-      <div className="bg-[#F36B1D]/80 rounded-2xl p-6 max-w-6xl mx-auto">
+      <div className="bg-[#71722C]/50 rounded-2xl p-6 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {services.map((service, index) => (
             <Link
@@ -79,10 +79,10 @@ export default function ServicesSection() {
                 <CardContent className="flex flex-col md:flex-row items-center justify-between gap-4 p-6 w-full">
                   {/* Left Section - Title + Description */}
                   <div className="flex-1 text-center sm:text-left">
-                    <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2">
+                    <h3 className="text-xl sm:text-2xl font-bold text-slate-500 mb-2">
                       {service.title}
                     </h3>
-                    <p className="text-slate-800 text-sm sm:text-base md:text-lg">
+                    <p className="text-slate-600 text-sm sm:text-base md:text-lg">
                       {service.description}
                     </p>
                   </div>

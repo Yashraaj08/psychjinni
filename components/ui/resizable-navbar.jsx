@@ -45,7 +45,7 @@ export const NavBody = ({ children, className, visible }) => {
   return (
     <div
       className={cn(
-        "relative z-[60] mx-auto hidden w-full flex-row items-center justify-between self-start bg-primary px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32 py-4 lg:flex",
+        "relative z-[60] mx-auto hidden w-full flex-row items-center justify-between self-start bg-[#9D83D7] px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32 py-4 lg:flex",
         className
       )}
     >

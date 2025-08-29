@@ -22,7 +22,7 @@ const ContactUs = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url(/contact-hero.jpg)" }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-primary/60"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/80 sm:bg-gradient-to-r sm:from-primary/20 sm:to-primary/60 lg:bg-gradient-to-r lg:from-primary/10 lg:to-primary/90"></div>
         </div>
 
         {/* Text Content */}

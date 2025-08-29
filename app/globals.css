@@ -61,7 +61,7 @@ img.transparent-gif {
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: #5664ff;
+  --primary: #9D83D7;
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
@@ -92,8 +92,8 @@ img.transparent-gif {
   --brand-blue-dark: 230 65% 45%;
   --gradient-wave: linear-gradient(
     180deg,
-    hsl(var(--brand-blue)) 0%,
-    #5664ff 100%
+    #8D73C1 0%,
+    #9D83D7 100%
   );
 }
 
