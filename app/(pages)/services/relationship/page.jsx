@@ -4,11 +4,13 @@ import ContactForm from "@/components/ContactForm";
 import FlipCardGrid from "@/components/FilpCard";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import HeroVideoSection from "@/components/HeroVideoSection";
 
 const Relationship = () => {
   const relationshipPrograms = [
     {
       id: 1,
+      img: "/cards/couple-heart.png",
       title: "HeartSync: Couples & Partnership Coaching",
       tagline: "From conflict to connection—strengthen your partnership.",
       gradient: "from-red-400 to-rose-500",
@@ -18,6 +20,7 @@ const Relationship = () => {
     {
       id: 2,
       title: "Bridge Talk: Communication & Conflict Coaching",
+      img: "/cards/bridge-comm.png",
       tagline: "Speak to be heard. Listen to be understood.",
       gradient: "from-blue-400 to-indigo-500",
       benefit:
@@ -25,6 +28,7 @@ const Relationship = () => {
     },
     {
       id: 3,
+      img: "/cards/family-ties.png",
       title: "Family Ties: Family Dynamics & Harmony Coaching",
       tagline: "Stronger families. Stronger foundations.",
       gradient: "from-green-400 to-emerald-500",
@@ -34,6 +38,7 @@ const Relationship = () => {
     {
       id: 4,
       title: "Together Ahead: Pre-Marital & Life Transition Coaching",
+      img: "/cards/pre-marraige.png",
       tagline: "Prepare for the journey, not just the day.",
       gradient: "from-purple-400 to-fuchsia-500",
       benefit:
@@ -42,6 +47,7 @@ const Relationship = () => {
     {
       id: 5,
       title: "Love Languages Lab: Emotional Intelligence & Intimacy Coaching",
+      img: "/cards/love-language.png",
       tagline: "Empathy is the secret ingredient to lasting bonds.",
       gradient: "from-pink-400 to-rose-500",
       benefit:
@@ -50,6 +56,7 @@ const Relationship = () => {
     {
       id: 6,
       title: "Trust Builder: Infidelity & Relationship Trust Coaching",
+      img: "/cards/infidelity.png",
       tagline: "Healing wounds. Restoring connection.",
       gradient: "from-amber-400 to-orange-500",
       benefit:
@@ -58,6 +65,7 @@ const Relationship = () => {
     {
       id: 7,
       title: "Bond Beyond: Postpartum & New Parent Relationship Coaching",
+      img: "/cards/new-parent.png",
       tagline: "Rediscover connection after life changes.",
       gradient: "from-cyan-400 to-sky-500",
       benefit:
@@ -66,6 +74,7 @@ const Relationship = () => {
     {
       id: 8,
       title: "Harmony Hub: Financial & Lifestyle Relationship Coaching",
+      img: "/cards/finances.png",
       tagline: "Because money and life stress affect love.",
       gradient: "from-emerald-400 to-teal-500",
       benefit:
@@ -74,6 +83,7 @@ const Relationship = () => {
     {
       id: 9,
       title: "Family Peace: In-Law & Extended Family Coaching",
+      img: "/cards/in-laws.png",
       tagline: "Creating bridges across households.",
       gradient: "from-indigo-400 to-blue-600",
       benefit:
@@ -82,6 +92,7 @@ const Relationship = () => {
     {
       id: 10,
       title: "SparkRevive: Reigniting Love & Intimacy",
+      img: "/cards/spark-revie.png",
       tagline: "Rediscover the passion in your relationship.",
       gradient: "from-rose-400 to-pink-600",
       benefit:
@@ -94,27 +105,10 @@ const Relationship = () => {
       <Header />
 
       {/* Hero Section */}
-        <section className="top-10 relative flex items-center justify-center sm:justify-end overflow-hidden h-[60vh]">
-        {/* Background Video with Overlay */}
-        <div className="absolute inset-0 w-full h-full">
-          <video
-            className="w-full sm:w-1/2 h-full object-contain"
-            src={"/home/relationship-inside.mov"} // your .mp4/.mov file
-            autoPlay
-            loop
-            muted
-            playsInline
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/80 sm:bg-gradient-to-r sm:from-primary/20 sm:to-primary/60 lg:bg-gradient-to-r lg:from-primary/10 lg:to-primary/90"></div>
-        </div>
-
-        {/* Text Content */}
-        <div className="relative z-10 text-center sm:text-right px-4 sm:px-6 md:px-8">
-          <h1 className="text-4xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-snug sm:leading-tight">
-         Relationhip
-          </h1>
-        </div>
-      </section>
+      <HeroVideoSection
+        title="Relationship"
+        videoSrc="/home/relationship-inside.mov"
+      />
 
       {/* Content Section */}
       <section className="mt-20 px-4">
@@ -163,39 +157,9 @@ const Relationship = () => {
                 guide you to <b>grow, understand, and nurture them</b> with
                 empathy, insight, and actionable strategies.
               </p>
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-orange-500/10 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-orange-500 text-xl">🌟</span>
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground">
-                      Neutral Environment
-                    </p>
-                    <p className="text-muted-foreground">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Dolores, eum.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-orange-500/10 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-orange-500 text-xl">🛠️</span>
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground">
-                      Practical Tools
-                    </p>
-                    <p className="text-muted-foreground">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Dolores, eum.
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
 
-            <ContactForm serviceType="relationship counseling" />
+            <ContactForm serviceType="relationship coaching" />
           </div>
         </div>
       </section>

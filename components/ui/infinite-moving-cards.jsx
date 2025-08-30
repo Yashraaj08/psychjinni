@@ -15,12 +15,18 @@ export const InfiniteMovingCards = ({
 
   useEffect(() => {
     addAnimation();
+    // eslint-disable-next-line
   }, []);
   const [start, setStart] = useState(false);
 
   function addAnimation() {
     if (containerRef.current && scrollerRef.current) {
-      const scrollerContent = Array.from(scrollerRef.current.children);
+      // Remove previous duplicates if any
+      while (scrollerRef.current.children.length > items.length) {
+        scrollerRef.current.removeChild(scrollerRef.current.lastChild);
+      }
+      // Duplicate only the original items for seamless loop
+      const scrollerContent = Array.from(scrollerRef.current.children).slice(0, items.length);
       scrollerContent.forEach((item) => {
         const duplicatedItem = item.cloneNode(true);
         scrollerRef.current?.appendChild(duplicatedItem);
@@ -63,7 +69,7 @@ export const InfiniteMovingCards = ({
       <ul
         ref={scrollerRef}
         className={cn(
-          "flex w-max min-w-full shrink-0 flex-nowrap gap-4 sm:gap-6 md:gap-8",
+          "flex w-max min-w-full shrink-0 flex-nowrap",
           start && "animate-scroll",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
@@ -71,16 +77,18 @@ export const InfiniteMovingCards = ({
         {items.map((item, idx) => (
           <li
             key={idx}
-            className="relative w-auto shrink-0 flex items-center justify-center gap-2 px-3 
-             h-10 sm:h-14 md:h-16 lg:h-20" // ✅ maintains same height for all cards
+            className="flex items-center justify-center" // uniform horizontal padding for all
+            style={{ gap: "1rem" }} // uniform gap between gif and text
           >
-            <img
-              src={item.gif}
-              alt={item.text}
-              className="h-full w-auto object-contain"
-            />
-            <span className="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-white whitespace-nowrap">
-              {item.text}
+            <span className="flex items-center justify-center px-4 py-2">
+              <img
+                src={item.gif}
+                alt={item.text}
+                className="h-9 sm:h-10 md:h-12 w-auto object-contain bg-white rounded-full p-0.1"
+              />
+              <span className="ml-6 text-base sm:text-lg md:text-xl font-bold text-white whitespace-nowrap">
+                {item.text}
+              </span>
             </span>
           </li>
         ))}

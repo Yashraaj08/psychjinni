@@ -13,10 +13,10 @@ export default function HeroSection() {
     >
       {/* Title & Subtitle */}
       <div className="mt-40 sm:mt-48 md:mt-60 max-w-2xl md:max-w-3xl">
-        <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-black italic mb-4 leading-snug">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-slate-600 italic mb-4 leading-snug">
           Empowering Minds to Heal, Not Hide
         </h1>
-        <p className="text-base sm:text-lg md:text-xl text-slate-600 font-semibold leading-relaxed">
+        <p className="text-base sm:text-lg md:text-xl text-slate-500 font-semibold leading-relaxed">
           PsychJinni is your safe space for emotional healing, growth, and
           discovery. We believe each mind has strength, even in silence, and no
           one should need to conceal struggle. With understanding and
@@ -43,14 +43,14 @@ export default function HeroSection() {
             loop
             muted
             playsInline
-            className="w-[250px] sm:w-[350px] md:w-[400px] h-auto"
+            className="w-[250px] sm:w-[300px] md:w-[400px] h-auto"
           />
         </div>
       </div>
       {/* Clouds Layered Behind Video */}
-      <div className="hidden sm:flex relative w-full justify-center mt-[-90px] bottom-0">
+      <div className="flex relative w-full justify-center -mt-[90px] sm:mt-[-150px] bottom-0">
         {/* Container with explicit height */}
-        <div className="relative w-full h-[500px] sm:h-[500px] md:h-[500px] lg:h-[500px]">
+        <div className="relative w-full h-[180px] sm:h-[300px] md:h-[300px] lg:h-[300px]">
           {/* Back Cloud */}
           <Image
             src="/clouds-back.png"
@@ -63,7 +63,7 @@ export default function HeroSection() {
             src="/clouds-front.png"
             alt="Clouds Foreground"
             fill
-            className="object-contain z-10 -mt-10 md:mt-4"
+            className="object-contain z-10 md:mt-4"
           />
         </div>
       </div>

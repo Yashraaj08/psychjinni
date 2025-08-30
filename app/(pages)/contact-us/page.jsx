@@ -2,7 +2,9 @@
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import HeroVideoSection from "@/components/HeroVideoSection";
 import { motion } from "framer-motion";
+import { Phone } from "lucide-react";
 
 const ContactUs = () => {
   return (
@@ -16,40 +18,15 @@ const ContactUs = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="-top-40 relative flex items-center overflow-hidden h-[50vh] sm:h-[60vh] md:h-[60vh] lg:h-[60vh]">
-        {/* Background Image with Overlay */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url(/contact-hero.jpg)" }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/80 sm:bg-gradient-to-r sm:from-primary/20 sm:to-primary/60 lg:bg-gradient-to-r lg:from-primary/10 lg:to-primary/90"></div>
-        </div>
-
-        {/* Text Content */}
-        <div className="top-20 relative z-10 container mx-auto px-4 sm:px-6 md:px-8">
-          <div className="max-w-2xl md:max-w-3xl">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-snug sm:leading-tight">
-              Contact Us
-            </h1>
-            <p className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed">
-              Ready to start your mental health journey? We're here to help you
-              take the first step towards healing and growth.
-            </p>
-          </div>
-        </div>
-      </section>
+      <HeroVideoSection title="Contact Us" videoSrc="/home/contact-us.mov" />
 
       {/* Contact Information & Form Section */}
-      <section className="-top-20 relative">
-        <div className="container mx-auto px-4">
+      <section className="mt-20 relative">
+        <div className="mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Contact Information */}
-            <div className="space-y-10">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
+            <div className="space-y-5">
+              <div>
                 <h2 className="text-4xl font-extrabold text-[#1e293b] mb-4">
                   Get in Touch
                 </h2>
@@ -58,17 +35,17 @@ const ContactUs = () => {
                   Reach out through any of the following ways, and we’ll respond
                   promptly.
                 </p>
-              </motion.div>
+              </div>
 
               <div className="grid gap-6">
                 {/* Contact Items */}
                 {[
                   {
                     title: "Office Address:",
-                    desc: "Dehradun, Uttarakhand, India",
+                    desc: "142/2 Chaman Vihar, Niranjanpur, Dehradun 248001, Uttarakhand, India",
                     icon: "📍",
                   },
-                  { title: "Phone:", desc: "(555) 123-4567", icon: "📞" },
+                  { title: "Phone:", desc: "+919897192630", icon: "📞" },
                   {
                     title: "Email:",
                     desc: "psychjinni@gmail.com",
@@ -82,9 +59,6 @@ const ContactUs = () => {
                 ].map((item, i) => (
                   <motion.div
                     key={i}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
                     className="flex items-center gap-4 bg-white/70 backdrop-blur-lg shadow-md p-5 rounded-xl transition"
                   >
                     {/* Icon */}
@@ -100,40 +74,45 @@ const ContactUs = () => {
                   </motion.div>
                 ))}
               </div>
-
-              {/* Emergency Info */}
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                className="bg-red-50 border-l-4 border-red-400 p-6 rounded-xl"
-              >
-                <h3 className="font-semibold text-red-600 mb-2">
-                  🚨 Emergency Support
-                </h3>
-                <p className="text-slate-600 mb-3">
-                  If you're experiencing a mental health emergency, please call:
-                </p>
-                <p className="text-red-500 font-bold text-lg">
-                  Crisis Hotline: 19 / 1800-599-0019
-                </p>
-              </motion.div>
             </div>
 
             {/* Contact Form */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
+            <div>
               <ContactForm />
-            </motion.div>
+            </div>
+          </div>
+          <div className="bg-red-50 border-l-4 border-red-400 p-6 rounded-xl mt-8 sm:mt-10 md:mt-12">
+            <h3 className="font-semibold text-red-600 mb-2">
+              🚨 Emergency Support
+            </h3>
+            <p className="text-slate-700 mb-4">
+              If you ever express thoughts of suicide or severe self-harm, our
+              first responsibility is to ensure your safety. In such cases,
+              confidentiality may be broken to connect you with immediate
+              support.
+            </p>
+            <p className="text-slate-700 mb-3">
+              If you are in India and need urgent help, please reach out to:
+            </p>
+            <div className="space-y-2">
+              <div className="flex items-center gap-2 text-red-700">
+                <Phone fill="#C10008" className="w-4 h-4" />
+                <span>Vandrevala Foundation Helpline: +91-9999 666 555</span>
+              </div>
+              <div className="flex items-center gap-2 text-red-700">
+                <Phone fill="#C10008" className="w-4 h-4" />
+                <span>AASRA Helpline (24x7): +91-98204 66726</span>
+              </div>
+            </div>
+            <p className="text-slate-800 dark:text-red-300 font-medium mt-4">
+              Remember: You are not alone, and help is available.
+            </p>
           </div>
         </div>
       </section>
 
       <div className="py-10">
-        <div className="py-10">
-          <Footer />
-        </div>
+        <Footer />
       </div>
     </div>
   );

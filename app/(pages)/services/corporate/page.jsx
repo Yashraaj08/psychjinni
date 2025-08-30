@@ -4,12 +4,14 @@ import ContactForm from "@/components/ContactForm";
 import FlipCardGrid from "@/components/FilpCard";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import HeroVideoSection from "@/components/HeroVideoSection";
 
 const Corporate = () => {
   const corporatePrograms = [
     {
       id: 1,
       title: "The Resilient Leader Program",
+      img: "/cards/leader.png",
       tagline: "From managers to visionaries—unleash authentic leadership.",
       gradient: "from-amber-500 to-orange-600",
       benefit:
@@ -18,6 +20,7 @@ const Corporate = () => {
     {
       id: 2,
       title: "Synergy: High-Performance Team Coaching",
+      img: "/cards/high-performance.png",
       tagline: "Better collaboration. Smarter outcomes.",
       gradient: "from-blue-500 to-purple-600",
       benefit:
@@ -26,6 +29,7 @@ const Corporate = () => {
     {
       id: 3,
       title: "Work-Life Balance & Well-being Series",
+      img: "/cards/work-balance.png",
       tagline: "Healthy employees. Thriving workplaces.",
       gradient: "from-emerald-500 to-teal-600",
       benefit:
@@ -34,6 +38,7 @@ const Corporate = () => {
     {
       id: 4,
       title: "Culture Catalyst: Organizational Development Program",
+      img: "/cards/culture-catlyst.png",
       tagline: "Create workplaces where people feel safe, valued, and engaged.",
       gradient: "from-rose-500 to-pink-600",
       benefit:
@@ -42,6 +47,7 @@ const Corporate = () => {
     {
       id: 5,
       title: "Agility & Innovation Coaching",
+      img: "/cards/agility-innovation.png",
       tagline: "Turning change into opportunity.",
       gradient: "from-teal-400 to-sky-500",
       benefit:
@@ -54,28 +60,11 @@ const Corporate = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="top-10 relative flex items-center justify-center sm:justify-end overflow-hidden h-[60vh]">
-        {/* Background Video with Overlay */}
-        <div className="absolute inset-0 w-full h-full">
-          <video
-            className="w-full sm:w-1/2 h-full object-contain"
-            src={"/home/corporate-inside.mov"} // your .mp4/.mov file
-            autoPlay
-            loop
-            muted
-            playsInline
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/80 sm:bg-gradient-to-r sm:from-primary/20 sm:to-primary/60 lg:bg-gradient-to-r lg:from-primary/10 lg:to-primary/90"></div>
-        </div>
-
-        {/* Text Content */}
-        <div className="relative z-10 text-center sm:text-right px-4 sm:px-6 md:px-8">
-          <h1 className="text-4xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-snug text-white italic sm:leading-tight">
-            Corporate Growth & <br className="hidden sm:block" /> Mental Fitness
-            Programs
-          </h1>
-        </div>
-      </section>
+      <HeroVideoSection
+        title={`Corporate Growth & <br class="hidden sm:block" /> Mental Fitness Programs`}
+        videoSrc="/home/corporate-inside.mov"
+        breakTitle={true}
+      />
 
       {/* Content Section */}
       <section className="mt-20 pb-20 px-4">
@@ -124,28 +113,6 @@ const Corporate = () => {
                 build stronger employees, but to shape resilient leaders,
                 future-ready managers, and thriving workplace cultures.
               </p>
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-orange-500/10 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-orange-500 text-xl">📞</span>
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground">Phone</p>
-                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-orange-500/10 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-orange-500 text-xl">✉️</span>
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground">Email</p>
-                    <p className="text-muted-foreground">
-                      corporate@mentalhealth.com
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
 
             <ContactForm serviceType="corporate mental health" />

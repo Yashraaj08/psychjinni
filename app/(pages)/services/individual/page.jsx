@@ -4,12 +4,14 @@ import ContactForm from "@/components/ContactForm";
 import FlipCardGrid from "@/components/FilpCard";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import HeroVideoSection from "@/components/HeroVideoSection";
 
 const Individual = () => {
   const individualPrograms = [
     {
       id: 1,
       title: "Inner Compass: Self-Discovery & Identity Coaching",
+      img: "/cards/compass.png",  
       tagline: "Find clarity in who you are and where you’re going.",
       gradient: "from-amber-500 to-orange-600",
       benefit:
@@ -18,6 +20,7 @@ const Individual = () => {
     {
       id: 2,
       title: "Resilience Reset: Emotional Stability & Mental Fitness",
+      img: "/cards/resilience.png",
       tagline: "Balance your emotions. Build inner resilience.",
       gradient: "from-blue-500 to-indigo-600",
       benefit:
@@ -28,12 +31,14 @@ const Individual = () => {
       title: "Healing Heart: Grief & Loss Recovery",
       tagline: "Finding light in the shadows of loss.",
       gradient: "from-rose-500 to-pink-600",
+      img: "/cards/grief.png",
       benefit:
         "Grief is deeply personal and often isolating. This program offers compassionate guidance through loss, helping individuals find healing and renewed strength.",
     },
     {
       id: 4,
       title: "Strength in Silence: Loneliness & Connection Coaching",
+      img: "/cards/loneliness.png",
       tagline: "Because everyone deserves to feel seen and heard.",
       gradient: "from-emerald-500 to-teal-600",
       benefit:
@@ -42,6 +47,7 @@ const Individual = () => {
     {
       id: 5,
       title: "Mind Uncluttered: Thought & Sleep Reset Program",
+      img: "/cards/mind-uncluttered.png",
       tagline: "Quiet the mind. Rest the body. Reset the spirit.",
       gradient: "from-purple-500 to-violet-600",
       benefit:
@@ -50,6 +56,7 @@ const Individual = () => {
     {
       id: 6,
       title: "Cultural Harmony: Identity & Belonging Coaching",
+      img: "/cards/cultural-harmony.png",
       tagline: "Finding your balance between cultures and expectations.",
       gradient: "from-teal-500 to-cyan-600",
       benefit:
@@ -58,6 +65,7 @@ const Individual = () => {
     {
       id: 7,
       title: "Life Pathways: Career & Purpose Alignment",
+      img: "/cards/career-purpose.png",
       tagline: "Create a career that fits your life, not the other way around.",
       gradient: "from-indigo-500 to-blue-600",
       benefit:
@@ -68,6 +76,7 @@ const Individual = () => {
       title: "Self-Leadership Mastery: Becoming Your Own Guide",
       tagline: "Lead yourself first—the rest will follow.",
       gradient: "from-orange-500 to-red-600",
+      img: "/cards/self-leadership.png",
       benefit:
         "Lasting growth begins with self-leadership. This program teaches you to trust yourself, take ownership, and build consistency for long-term success.",
     },
@@ -78,29 +87,11 @@ const Individual = () => {
       <Header />
 
       {/* Hero Section */}
-
-      <section className="top-10 relative flex items-center justify-center sm:justify-end overflow-hidden h-[60vh]">
-        {/* Background Video with Overlay */}
-        <div className="absolute inset-0 w-full h-full">
-          <video
-            className="w-full sm:w-1/2 h-full object-contain"
-            src={"/home/individual-inside.mov"} // your .mp4/.mov file
-            autoPlay
-            loop
-            muted
-            playsInline
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/80 sm:bg-gradient-to-r sm:from-primary/20 sm:to-primary/60 lg:bg-gradient-to-r lg:from-primary/10 lg:to-primary/90"></div>
-        </div>
-
-        {/* Text Content */}
-        <div className="relative z-10 text-center sm:text-right px-4 sm:px-6 md:px-8">
-          <h1 className="text-4xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-snug sm:leading-tight">
-            Individual Growth <br className="hidden sm:block" /> & Emotional
-            Wellness
-          </h1>
-        </div>
-      </section>
+      <HeroVideoSection
+        title={`Individual Growth <br class='hidden sm:block' /> & Emotional Wellness`}
+        videoSrc="/home/individual-inside.mov"
+        breakTitle={true}
+      />
 
       {/* Content Section */}
       <section className="mt-20 px-4">
@@ -148,36 +139,6 @@ const Individual = () => {
                 <b>grief, loneliness, identity struggles, or personal growth</b>
                 , you don’t have to walk alone.
               </p>
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-orange-500/10 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-orange-500 text-xl">🔒</span>
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground">
-                      Confidential & Safe
-                    </p>
-                    <p className="text-muted-foreground">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Dolores, eum.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-orange-500/10 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-orange-500 text-xl">⏰</span>
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground">
-                      Flexible Scheduling
-                    </p>
-                    <p className="text-muted-foreground">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Dolores, eum.
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
 
             <ContactForm serviceType="individual therapy" />

@@ -4,12 +4,14 @@ import ContactForm from "@/components/ContactForm";
 import FlipCardGrid from "@/components/FilpCard";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import HeroVideoSection from "@/components/HeroVideoSection";
 
 const Educational = () => {
   const academicPrograms = [
     {
       id: 1,
       title: "Ignite: Student Growth & Resilience Program",
+      img:"/cards/student-growth.png",
       tagline: "Helping students learn smarter, not harder.",
       benefit:
         "Students learn resilience, focus, and self-confidence—skills that last well beyond exams.",
@@ -18,6 +20,7 @@ const Educational = () => {
     {
       id: 2,
       title: "EmpowerEd: Educator Development Workshops",
+      img: "/cards/empowered.png",
       tagline: "Empowered educators create empowered learners.",
       benefit:
         "Teachers who feel supported create classrooms where students feel safe, motivated, and inspired.",
@@ -26,6 +29,7 @@ const Educational = () => {
     {
       id: 3,
       title: "Family Connect: Parent & Student Support",
+      img: "/cards/family-connect.png",
       tagline: "Because a child’s growth begins at home.",
       benefit:
         "Parents learn to support without pressuring, building stronger bonds and reducing conflict at home.",
@@ -34,6 +38,7 @@ const Educational = () => {
     {
       id: 4,
       title: "EduVision: Institutional Excellence & Wellness",
+      img: "/cards/eduvision.png",
       tagline: "Helping institutions build legacies, not just curriculums.",
       benefit:
         "Institutions create reputations not just for academics, but for fostering mentally healthy communities.",
@@ -42,6 +47,7 @@ const Educational = () => {
     {
       id: 5,
       title: "Thrive: Adolescent & Youth Emotional Wellness",
+      img: "/cards/thrive.png",
       tagline: "Guiding young minds through life’s toughest years.",
       benefit:
         "This program gives adolescents tools to handle stress, belonging, and identity crises in healthy ways.",
@@ -50,6 +56,7 @@ const Educational = () => {
     {
       id: 6,
       title: "Future Pathways: Career & Motivation Coaching",
+      img: "/cards/future-pathways.png",
       tagline: "Clarity today. Success tomorrow.",
       benefit:
         "Students learn to pursue paths aligned with their true potential—not just external pressures.",
@@ -58,6 +65,7 @@ const Educational = () => {
     {
       id: 7,
       title: "Bridge: Parent–Teen Communication Labs",
+      img: "/cards/bridge-family.png",
       tagline: "Because conversations at home shape futures.",
       benefit:
         "Families learn to replace nagging, silence, and conflict with trust, empathy, and open communication.",
@@ -66,6 +74,7 @@ const Educational = () => {
     {
       id: 8,
       title: "Safe Space: Anti-Bullying & Peer Support Program",
+      img: "/cards/bullying.png",
       tagline: "Every student deserves safety, belonging & respect.",
       benefit:
         "Schools foster inclusivity and create safe communities where students thrive socially and academically.",
@@ -78,28 +87,11 @@ const Educational = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="top-10 relative flex items-center justify-center sm:justify-end overflow-hidden h-[60vh]">
-        {/* Background Video with Overlay */}
-        <div className="absolute inset-0 w-full h-full">
-          <video
-            className="w-full sm:w-1/2 h-full object-contain"
-            src={"/home/educational-inside.mov"} // your .mp4/.mov file
-            autoPlay
-            loop
-            muted
-            playsInline
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/80 sm:bg-gradient-to-r sm:from-primary/20 sm:to-primary/60 lg:bg-gradient-to-r lg:from-primary/10 lg:to-primary/90"></div>
-        </div>
-
-        {/* Text Content */}
-        <div className="relative z-10 text-center sm:text-right px-4 sm:px-6 md:px-8">
-          <h1 className="text-4xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-snug sm:leading-tight">
-            Education &<br className="hidden sm:block" />
-            Academic Wellness
-          </h1>
-        </div>
-      </section>
+      <HeroVideoSection
+        title={`Education & <br class="hidden sm:block" /> Academic Wellness`}
+        videoSrc="/home/educational-inside.mov"
+        breakTitle={true}
+      />
 
       {/* Content Section */}
       <section className="mt-20 px-4">
@@ -148,36 +140,6 @@ const Educational = () => {
                 create a future where learning communities are as{" "}
                 <b>healthy as they are successful.</b>
               </p>
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-orange-500/10 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-orange-500 text-xl">📚</span>
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground">
-                      Educational Resources
-                    </p>
-                    <p className="text-muted-foreground">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Dolores, eum.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-orange-500/10 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-orange-500 text-xl">🎯</span>
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground">
-                      Custom Solutions
-                    </p>
-                    <p className="text-muted-foreground">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Dolores, eum.
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
 
             <ContactForm serviceType="educational mental health" />

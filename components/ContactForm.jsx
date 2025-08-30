@@ -15,13 +15,14 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { toast, useSonner } from "sonner";
+import { toast } from "sonner";
+import axios from "axios";
 
 // Schema for validation
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
-  phone: z.string().min(10, "Please enter a valid phone number"),
+  phone: z.string().min(10, "Please enter a valid 10 digit phone number"),
   message: z.string().min(10, "Message must be at least 10 characters"),
 });
 
@@ -40,17 +41,36 @@ const ContactForm = ({ serviceType }) => {
 
   const onSubmit = async (data) => {
     setIsSubmitting(true);
+    console.log("Submitting form data:", { ...data, serviceType });
+    try {
+      // Replace with your actual server IP and port if not localhost
+      const response = await axios.post("http://192.168.1.5:5000/api/enquiry", {
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...data, serviceType }),
+      });
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+      console.log("Raw response:", response);
+      const result = await response.json();
+      console.log("Server response:", result);
 
-    console.log("Form submitted:", { ...data, serviceType });
+      if (response.ok) {
+        toast.success("Message Sent!", {
+          description: "Thank you for your inquiry. We'll get back to you soon.",
+        });
+        form.reset();
+      } else {
+        console.error("Error response from server:", result);
+        toast.error("Failed to send message", {
+          description: result.error || "Please try again later.",
+        });
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error("Network error", {
+        description: "Could not connect to the server.",
+      });
+    }
 
-    toast.success("Message Sent!", {
-      description: "Thank you for your inquiry. We'll get back to you soon.",
-    });
-
-    form.reset();
     setIsSubmitting(false);
   };
 

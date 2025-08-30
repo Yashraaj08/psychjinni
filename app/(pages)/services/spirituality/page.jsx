@@ -4,12 +4,14 @@ import ContactForm from "@/components/ContactForm";
 import FlipCardGrid from "@/components/FilpCard";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import HeroVideoSection from "@/components/HeroVideoSection";
 
 const Spirituality = () => {
   const spiritualPrograms = [
     {
       id: 1,
       title: "InnerLight: Guided Meditation & Mindfulness Coaching",
+      img: "/cards/guided-med.png",
       tagline: "Reconnect with your present, find clarity, and reduce stress.",
       benefit:
         "Developing mindfulness empowers you to respond rather than react, promoting emotional stability and personal fulfillment.",
@@ -18,6 +20,7 @@ const Spirituality = () => {
     {
       id: 2,
       title: "SoulPath: Life Purpose & Spiritual Alignment",
+      img: "/cards/soul-path.png",
       tagline: "Discover your deeper meaning and align with your values.",
       benefit:
         "Clarifying your purpose cultivates motivation, inner peace, and personal satisfaction.",
@@ -26,6 +29,7 @@ const Spirituality = () => {
     {
       id: 3,
       title: "GriefEase: Mindful Healing & Loss Recovery",
+      img: "/cards/grief-ease.png",
       tagline: "Transform loss into growth with compassionate guidance.",
       benefit:
         "Mindful grief processing allows healing, emotional release, and renewed strength in everyday life.",
@@ -34,6 +38,7 @@ const Spirituality = () => {
     {
       id: 4,
       title: "PresenceMaster: Mindful Emotional Regulation",
+      img: "/cards/emotional.png",
       tagline: "Stay centered even in life’s most challenging moments.",
       benefit:
         "Mastering emotional regulation improves personal well-being, reduces anxiety, and enhances decision-making.",
@@ -42,6 +47,7 @@ const Spirituality = () => {
     {
       id: 5,
       title: "ZenWork: Mindfulness in Daily Life & Work",
+      img: "/cards/daily-life.png",
       tagline: "Bring calm and focus into your everyday routines.",
       benefit:
         "Mindful living promotes sustained focus, reduces burnout, and creates a harmonious daily rhythm.",
@@ -50,6 +56,7 @@ const Spirituality = () => {
     {
       id: 6,
       title: "HeartCenter: Compassion & Self-Love Practices",
+      img: "/cards/heart-center.png",
       tagline: "Cultivate inner kindness and stronger emotional connection.",
       benefit:
         "Developing self-compassion strengthens emotional resilience, reduces self-criticism, and promotes inner peace.",
@@ -58,6 +65,7 @@ const Spirituality = () => {
     {
       id: 7,
       title: "AwakenFlow: Mind-Body Awareness & Energy Alignment",
+      img: "/cards/awaken.png",
       tagline: "Tune into your body, mind, and subtle energies.",
       benefit:
         "Enhancing mind-body awareness supports holistic well-being, vitality, and emotional equilibrium.",
@@ -66,6 +74,7 @@ const Spirituality = () => {
     {
       id: 8,
       title: "ClarityCompass: Decision-Making & Mindful Choices",
+      img: "/cards/clarity-compass.png",
       tagline: "Make choices aligned with values and long-term goals.",
       benefit:
         "Mindful decision-making increases confidence, reduces regret, and fosters purposeful living.",
@@ -78,28 +87,11 @@ const Spirituality = () => {
       <Header />
 
       {/* Hero Section */}
-
-      <section className="top-10 relative flex items-center justify-center sm:justify-end overflow-hidden h-[60vh]">
-        {/* Background Video with Overlay */}
-        <div className="absolute inset-0 w-full h-full">
-          <video
-            className="w-full sm:w-1/2 h-full object-contain"
-            src={"/home/spirituality-inside.mov"} // your .mp4/.mov file
-            autoPlay
-            loop
-            muted
-            playsInline
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/80 sm:bg-gradient-to-r sm:from-primary/20 sm:to-primary/60 lg:bg-gradient-to-r lg:from-primary/10 lg:to-primary/90"></div>
-        </div>
-
-        {/* Text Content */}
-        <div className="relative z-10 text-center sm:text-right px-4 sm:px-6 md:px-8">
-          <h1 className="text-4xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-snug sm:leading-tight">
-            Spirituality <br className="hidden sm:block" /> & Mindfulness
-          </h1>
-        </div>
-      </section>
+      <HeroVideoSection
+        title={`Spirituality <br class='hidden sm:block' /> & Mindfulness`}
+        videoSrc="/home/spirituality-inside.mov"
+        breakTitle={true}
+      />
 
       {/* Content Section */}
       <section className="mt-20 px-4">
@@ -148,36 +140,6 @@ const Spirituality = () => {
                   integrate inner calm into everyday life.
                 </b>
               </p>
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-orange-500/10 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-orange-500 text-xl">🌟</span>
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground">
-                      Neutral Environment
-                    </p>
-                    <p className="text-muted-foreground">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Dolores, eum.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-orange-500/10 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-orange-500 text-xl">🛠️</span>
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground">
-                      Practical Tools
-                    </p>
-                    <p className="text-muted-foreground">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Dolores, eum.
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
 
             <ContactForm serviceType="relationship counseling" />

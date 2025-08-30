@@ -33,15 +33,11 @@ const FlipCardGrid = ({ title, subtitle, programs }) => {
                   <div className="flip-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group hover:[transform:rotateY(180deg)]">
                     {/* Front */}
                     <Card className="absolute inset-0 flex flex-col items-center justify-center p-6 border-0 shadow-xl rounded-2xl bg-gradient-to-br from-card to-card/80 [backface-visibility:hidden] transition-transform duration-500 group-hover:scale-[1.02]">
-                      {/* Video or Icon */}
-                      {program.video ? (
-                        <video
-                          src={program.video}
-                          autoPlay
-                          loop
-                          muted
-                          playsInline
-                          className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-xl shadow-lg mb-4 object-cover"
+                      {/* img or Icon */}
+                      {program.img ? (
+                        <img
+                          src={program.img}
+                          className={`w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-xl mb-4 object-cover border-2 border-slate-600}`}
                         />
                       ) : (
                         <div

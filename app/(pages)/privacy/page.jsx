@@ -1,48 +1,35 @@
 "use client";
 
-import { motion } from "framer-motion";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import { AlertTriangle, Mail, Phone } from "lucide-react";
 
 const Privacy = () => {
   return (
     <div
-      className="min-h-screen -mt-40"
+      className="min-h-screen"
       style={{
         background:
           "linear-gradient(135deg, #a8c0ff 0%, #cfd9ff 30%, #e0c3fc 60%, #8ec5fc 100%)",
       }}
     >
-      <div className="pt-44">
-        <Header />
-      </div>
+      <Header />
 
       <main className="container mx-auto px-4 py-16 max-w-4xl flex-grow">
         {/* Title */}
-        <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
+        <div className="text-center my-12">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Privacy Policy
           </h1>
           <p className="text-lg text-muted-foreground">
-            At <b>PsychJinni</b>, your trust matters most. We respect your privacy and
-            are committed to protecting your personal information with care and
-            confidentiality.
+            At <b>PsychJinni</b>, your trust matters most. We respect your
+            privacy and are committed to protecting your personal information
+            with care and confidentiality.
           </p>
-        </motion.div>
+        </div>
 
         {/* Content */}
-        <motion.div
-          className="prose prose-lg max-w-none"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-        >
+        <div className="prose prose-lg max-w-none">
           <div className="bg-card rounded-lg p-6 sm:p-8 shadow-sm border">
             {/* Section 1 */}
             <section className="mb-8">
@@ -223,7 +210,7 @@ const Privacy = () => {
               </p>
             </div>
           </div>
-        </motion.div>
+        </div>
       </main>
       <div className="py-10">
         <Footer />

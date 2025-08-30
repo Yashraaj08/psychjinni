@@ -5,10 +5,10 @@ export default function ChartSection() {
       <div className="flex flex-col items-center w-full lg:max-w-2xl">
         {/* Text */}
         <div className="text-center lg:text-left pl-0 lg:pl-20">
-          <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-black leading-snug">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-slate-500 leading-snug">
             Support That <br /> Understands You
           </h1>
-          <p className="mt-4 text-gray-600 font-semibold text-sm sm:text-base md:text-lg leading-relaxed max-w-md">
+          <p className="mt-4 text-slate-600 font-semibold text-sm sm:text-base md:text-lg leading-relaxed max-w-md">
             Redefining mental wellness with practical tools, expert guidance,
             and communities that foster growth and transformation.
           </p>

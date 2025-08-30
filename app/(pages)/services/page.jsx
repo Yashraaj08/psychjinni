@@ -2,6 +2,7 @@
 
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import HeroVideoSection from "@/components/HeroVideoSection";
 import ServicesSection from "@/components/ServicesSection";
 import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
@@ -56,29 +57,9 @@ export default function Services() {
       <Header />
 
       {/* Hero Section */}
-      <section className="top-10 relative flex items-center justify-center sm:justify-end overflow-hidden h-[60vh]">
-        {/* Background Video with Overlay */}
-        <div className="absolute inset-0 w-full h-full">
-          <video
-            className="w-full sm:w-1/2 h-full object-contain"
-            src={"/home/approach.mov"} // your .mp4/.mov file
-            autoPlay
-            loop
-            muted
-            playsInline
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/80 sm:bg-gradient-to-r sm:from-primary/20 sm:to-primary/60 lg:bg-gradient-to-r lg:from-primary/10 lg:to-primary/90"></div>
-        </div>
+      <HeroVideoSection title="Our Approach" videoSrc="/home/approach.mov" />
 
-        {/* Text Content */}
-        <div className="relative z-10 text-center sm:text-right px-4 sm:px-6 md:px-8">
-          <h1 className="text-4xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-snug text-white italic sm:leading-tight">
-            Our Approach
-          </h1>
-        </div>
-      </section>
-
-        <div className="mt-20 bg-[#71722C]/50 rounded-2xl p-6 max-w-6xl mx-auto">
+      <div className="mt-20 bg-[#71722C]/50 rounded-2xl p-6 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {services.map((service, index) => (
             <Link

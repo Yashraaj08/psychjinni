@@ -7,8 +7,8 @@ const Footer = () => {
   ];
 
   const legalLinks = [
-    { name: "Terms", href: "#terms" },
-    { name: "Privacy", href: "#privacy" },
+    { name: "Terms", href: "/terms" },
+    { name: "Privacy", href: "/privacy" },
   ];
 
   const resourceLinks = [
