@@ -59,7 +59,7 @@ export default function ServicesSection() {
         </p>
         <a
           href="/contact-us"
-          className="bg-primary hover:bg-blue-700 text-white rounded-full px-8 py-2 shadow-xl cursor-pointer text-lg"
+          className="bg-primary hover:bg-primary/80 text-white rounded-full px-8 py-2 shadow-xl cursor-pointer text-lg"
         >
           Book Now
         </a>
