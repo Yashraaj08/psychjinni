@@ -11,7 +11,7 @@ const Spirituality = () => {
     {
       id: 1,
       title: "InnerLight: Guided Meditation & Mindfulness Coaching",
-      img: "/cards/guided-med.png",
+      img: "/services/guided-med.mov",
       tagline: "Reconnect with your present, find clarity, and reduce stress.",
       benefit:
         "Developing mindfulness empowers you to respond rather than react, promoting emotional stability and personal fulfillment.",
@@ -20,7 +20,7 @@ const Spirituality = () => {
     {
       id: 2,
       title: "SoulPath: Life Purpose & Spiritual Alignment",
-      img: "/cards/soul-path.png",
+      img: "/services/soul-path.mov",
       tagline: "Discover your deeper meaning and align with your values.",
       benefit:
         "Clarifying your purpose cultivates motivation, inner peace, and personal satisfaction.",
@@ -29,7 +29,7 @@ const Spirituality = () => {
     {
       id: 3,
       title: "GriefEase: Mindful Healing & Loss Recovery",
-      img: "/cards/grief-ease.png",
+      img: "/services/grief-ease.mov",
       tagline: "Transform loss into growth with compassionate guidance.",
       benefit:
         "Mindful grief processing allows healing, emotional release, and renewed strength in everyday life.",
@@ -38,7 +38,7 @@ const Spirituality = () => {
     {
       id: 4,
       title: "PresenceMaster: Mindful Emotional Regulation",
-      img: "/cards/emotional.png",
+      img: "/services/emotional.mov",
       tagline: "Stay centered even in life’s most challenging moments.",
       benefit:
         "Mastering emotional regulation improves personal well-being, reduces anxiety, and enhances decision-making.",
@@ -47,7 +47,7 @@ const Spirituality = () => {
     {
       id: 5,
       title: "ZenWork: Mindfulness in Daily Life & Work",
-      img: "/cards/daily-life.png",
+      img: "/services/daily-life.mov",
       tagline: "Bring calm and focus into your everyday routines.",
       benefit:
         "Mindful living promotes sustained focus, reduces burnout, and creates a harmonious daily rhythm.",
@@ -56,7 +56,7 @@ const Spirituality = () => {
     {
       id: 6,
       title: "HeartCenter: Compassion & Self-Love Practices",
-      img: "/cards/heart-center.png",
+      img: "/services/heart-center.mov",
       tagline: "Cultivate inner kindness and stronger emotional connection.",
       benefit:
         "Developing self-compassion strengthens emotional resilience, reduces self-criticism, and promotes inner peace.",
@@ -65,7 +65,7 @@ const Spirituality = () => {
     {
       id: 7,
       title: "AwakenFlow: Mind-Body Awareness & Energy Alignment",
-      img: "/cards/awaken.png",
+      img: "/services/awaken.mov",
       tagline: "Tune into your body, mind, and subtle energies.",
       benefit:
         "Enhancing mind-body awareness supports holistic well-being, vitality, and emotional equilibrium.",
@@ -74,7 +74,7 @@ const Spirituality = () => {
     {
       id: 8,
       title: "ClarityCompass: Decision-Making & Mindful Choices",
-      img: "/cards/clarity-compass.png",
+      img: "/services/clarity-compass.mov",
       tagline: "Make choices aligned with values and long-term goals.",
       benefit:
         "Mindful decision-making increases confidence, reduces regret, and fosters purposeful living.",

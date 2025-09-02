@@ -11,7 +11,7 @@ const Individual = () => {
     {
       id: 1,
       title: "Inner Compass: Self-Discovery & Identity Coaching",
-      img: "/cards/compass.png",  
+      img: "/services/compass.mov",  
       tagline: "Find clarity in who you are and where you’re going.",
       gradient: "from-amber-500 to-orange-600",
       benefit:
@@ -20,7 +20,7 @@ const Individual = () => {
     {
       id: 2,
       title: "Resilience Reset: Emotional Stability & Mental Fitness",
-      img: "/cards/resilience.png",
+      img: "/services/resilience.mov",
       tagline: "Balance your emotions. Build inner resilience.",
       gradient: "from-blue-500 to-indigo-600",
       benefit:
@@ -31,14 +31,14 @@ const Individual = () => {
       title: "Healing Heart: Grief & Loss Recovery",
       tagline: "Finding light in the shadows of loss.",
       gradient: "from-rose-500 to-pink-600",
-      img: "/cards/grief.png",
+      img: "/services/grief.mov",
       benefit:
         "Grief is deeply personal and often isolating. This program offers compassionate guidance through loss, helping individuals find healing and renewed strength.",
     },
     {
       id: 4,
       title: "Strength in Silence: Loneliness & Connection Coaching",
-      img: "/cards/loneliness.png",
+      img: "/services/loneliness.mov",
       tagline: "Because everyone deserves to feel seen and heard.",
       gradient: "from-emerald-500 to-teal-600",
       benefit:
@@ -47,7 +47,7 @@ const Individual = () => {
     {
       id: 5,
       title: "Mind Uncluttered: Thought & Sleep Reset Program",
-      img: "/cards/mind-uncluttered.png",
+      img: "/services/mind-uncluttered.mov",
       tagline: "Quiet the mind. Rest the body. Reset the spirit.",
       gradient: "from-purple-500 to-violet-600",
       benefit:
@@ -56,7 +56,7 @@ const Individual = () => {
     {
       id: 6,
       title: "Cultural Harmony: Identity & Belonging Coaching",
-      img: "/cards/cultural-harmony.png",
+      img: "/services/cultural-harmony.mov",
       tagline: "Finding your balance between cultures and expectations.",
       gradient: "from-teal-500 to-cyan-600",
       benefit:
@@ -65,7 +65,7 @@ const Individual = () => {
     {
       id: 7,
       title: "Life Pathways: Career & Purpose Alignment",
-      img: "/cards/career-purpose.png",
+      img: "/services/career-purpose.mov",
       tagline: "Create a career that fits your life, not the other way around.",
       gradient: "from-indigo-500 to-blue-600",
       benefit:
@@ -76,7 +76,7 @@ const Individual = () => {
       title: "Self-Leadership Mastery: Becoming Your Own Guide",
       tagline: "Lead yourself first—the rest will follow.",
       gradient: "from-orange-500 to-red-600",
-      img: "/cards/self-leadership.png",
+      img: "/services/self-leadership.mov",
       benefit:
         "Lasting growth begins with self-leadership. This program teaches you to trust yourself, take ownership, and build consistency for long-term success.",
     },

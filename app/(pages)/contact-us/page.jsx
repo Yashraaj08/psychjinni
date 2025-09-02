@@ -21,7 +21,7 @@ const ContactUs = () => {
       <HeroVideoSection title="Contact Us" videoSrc="/home/contact-us.mov" />
 
       {/* Contact Information & Form Section */}
-      <section className="mt-20 relative">
+      <section className="mt-20 relative mx-4 sm:mx-8 lg:mx-20">
         <div className="mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Contact Information */}
@@ -59,7 +59,7 @@ const ContactUs = () => {
                 ].map((item, i) => (
                   <motion.div
                     key={i}
-                    className="flex items-center gap-4 bg-white/70 backdrop-blur-lg shadow-md p-5 rounded-xl transition"
+                    className="flex items-center gap-4 bg-white backdrop-blur-lg shadow-md p-5 rounded-xl transition"
                   >
                     {/* Icon */}
                     <div className="text-2xl">{item.icon}</div>
