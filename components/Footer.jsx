@@ -35,25 +35,25 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="/content-hub"
                 className="text-white/60 hover:text-white transition-colors duration-200"
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="/content-hub"
                 className="text-white/60 hover:text-white transition-colors duration-200"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="/content-hub"
                 className="text-white/60 hover:text-white transition-colors duration-200"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="/content-hub"
                 className="text-white/60 hover:text-white transition-colors duration-200"
               >
                 <Twitter className="w-5 h-5" />

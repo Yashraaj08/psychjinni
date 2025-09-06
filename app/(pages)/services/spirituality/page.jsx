@@ -142,7 +142,7 @@ const Spirituality = () => {
               </p>
             </div>
 
-            <ContactForm serviceType="relationship counseling" />
+            <ContactForm serviceType="spirituality coaching" />
           </div>
         </div>
       </section>

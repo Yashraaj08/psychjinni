@@ -141,7 +141,7 @@ const Individual = () => {
               </p>
             </div>
 
-            <ContactForm serviceType="individual therapy" />
+            <ContactForm serviceType="individual coaching" />
           </div>
         </div>
       </section>

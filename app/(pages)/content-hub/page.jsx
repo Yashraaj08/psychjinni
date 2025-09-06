@@ -33,17 +33,17 @@ export default function ContentHub() {
       <div className="flex flex-col items-center justify-center min-h-screen px-6 text-center">
         <div className="animate-bounce text-6xl mb-4">📚</div>
 
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+        <h1 className="text-4xl md:text-5xl font-bold text-slate-600 mb-4">
           Content Hub Launching Soon!
         </h1>
 
-        <p className="text-lg md:text-xl text-gray-600 max-w-2xl mb-8">
+        <p className="text-lg md:text-xl text-slate-500 max-w-2xl mb-8">
           We're crafting a powerful hub full of tutorials, guides, videos,
           blogs, and resources to help you grow, learn, and stay inspired. Be
           the first to get access.
         </p>
 
-        {!submitted ? (
+        {/* {!submitted ? (
           <div className="w-full max-w-md space-y-4">
             <Input
               type="email"
@@ -68,7 +68,7 @@ export default function ContentHub() {
           className="mt-10 bg-white text-gray-700 hover:text-black border border-gray-700"
         >
           ← Back to Home
-        </Button>
+        </Button> */}
       </div>
       <div className="py-10">
         <Footer />

@@ -35,7 +35,7 @@ const About = () => {
               <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
                 Our Vision
               </h2>
-              <p className="text-base md:text-lg text-gray-800 leading-relaxed">
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                 We envision a world where mental health and personal development
                 are not only about fixing problems, but about unlocking human
                 potential, nurturing resilience, and creating healthier
@@ -91,7 +91,7 @@ const About = () => {
               <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
                 Our Story
               </h2>
-              <div className="space-y-6 text-base md:text-lg text-gray-800 leading-relaxed">
+              <div className="space-y-6 text-base md:text-lg text-muted-foreground leading-relaxed">
                 <p>
                   PsychJinni was born from a deeply personal place—a recognition
                   that mental wellness often feels distant, clinical, or
@@ -130,27 +130,27 @@ const About = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {[
                   {
-                    image: "/testimonials/Avatar_01.png",
-                    name: "Mrs. Duaa",
-                    role: "Founder & Clinical Director",
+                    image: "/testimonials/Avatar_02.png",
+                    name: "Duaa",
+                    role: "Founder",
                     desc: "Licensed Clinical Psychologist with 15+ years of experience in trauma therapy and anxiety disorders.",
                   },
                   {
                     image: "/testimonials/Avatar_10.png",
-                    name: "Yashasvi Sachdeva",
-                    role: "Co-Founder & CFO",
+                    name: "Yashasvi",
+                    role: "CFO",
                     desc: "Licensed Marriage & Family Therapist specializing in couples therapy and family systems.",
                   },
                   {
-                    image: "/testimonials/Avatar_05.png",
+                    image: "/testimonials/Avatar_06.png",
                     name: "Dr. Sakshita",
-                    role: "Senior Therapist",
+                    role: "Senior Psychologist",
                     desc: "Licensed Clinical Social Worker with expertise in depression, grief counseling, and group therapy.",
                   },
                   {
-                    image: "/testimonials/Avatar_06.png",
-                    name: "Dr. Arsha",
-                    role: "Senior Therapist",
+                    image: "/testimonials/Avatar_05.png",
+                    name: "Arsha",
+                    role: "Psychologist",
                     desc: "Licensed Clinical Social Worker with expertise in depression, grief counseling, and group therapy.",
                   },
                   {
