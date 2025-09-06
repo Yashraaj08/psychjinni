@@ -40,35 +40,38 @@ const ContactForm = ({ serviceType }) => {
   });
 
   const onSubmit = async (data) => {
+    const payload = { ...data, serviceType: serviceType || "General Inquiry" };
+
     setIsSubmitting(true);
     console.log("Submitting form data:", { ...data, serviceType });
+
     try {
-      // Replace with your actual server IP and port if not localhost
-      const response = await axios.post("http://192.168.1.5:5000/api/enquiry", {
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, serviceType }),
+      const response = await axios.post(
+        "https://psychjinni-server.vercel.app/api/enquiry",
+        payload,
+        { headers: { "Content-Type": "application/json" } }
+      );
+
+      console.log("Server response:", response.data);
+
+      toast.success("Message Sent!", {
+        description: "Thank you for your inquiry. We'll get back to you soon.",
       });
-
-      console.log("Raw response:", response);
-      const result = await response.json();
-      console.log("Server response:", result);
-
-      if (response.ok) {
-        toast.success("Message Sent!", {
-          description: "Thank you for your inquiry. We'll get back to you soon.",
-        });
-        form.reset();
-      } else {
-        console.error("Error response from server:", result);
-        toast.error("Failed to send message", {
-          description: result.error || "Please try again later.",
-        });
-      }
+      form.reset();
     } catch (error) {
       console.error("Error submitting form:", error);
-      toast.error("Network error", {
-        description: "Could not connect to the server.",
-      });
+
+      if (error.response) {
+        // Server responded with a non-2xx code
+        toast.error("Failed to send message", {
+          description: error.response.data?.error || "Please try again later.",
+        });
+      } else {
+        // Network or other error
+        toast.error("Network error", {
+          description: "Could not connect to the server.",
+        });
+      }
     }
 
     setIsSubmitting(false);

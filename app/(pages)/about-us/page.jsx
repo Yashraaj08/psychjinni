@@ -130,22 +130,33 @@ const About = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {[
                   {
-                    image: "/testimonials/Avatar_10.png",
-                    name: "Dr. Sarah Johnson",
-                    role: "Co-Founder & Clinical Director",
+                    image: "/testimonials/Avatar_01.png",
+                    name: "Mrs. Duaa",
+                    role: "Founder & Clinical Director",
                     desc: "Licensed Clinical Psychologist with 15+ years of experience in trauma therapy and anxiety disorders.",
                   },
                   {
-                    image: "/testimonials/Avatar_01.png",
-                    name: "Dr. Michael Chen",
-                    role: "Co-Founder & Research Director",
+                    image: "/testimonials/Avatar_10.png",
+                    name: "Yashasvi Sachdeva",
+                    role: "Co-Founder & CFO",
                     desc: "Licensed Marriage & Family Therapist specializing in couples therapy and family systems.",
                   },
                   {
-                    image: "/testimonials/Avatar_02.png",
-
-                    name: "Dr. Amanda Rodriguez",
+                    image: "/testimonials/Avatar_05.png",
+                    name: "Dr. Sakshita",
                     role: "Senior Therapist",
+                    desc: "Licensed Clinical Social Worker with expertise in depression, grief counseling, and group therapy.",
+                  },
+                  {
+                    image: "/testimonials/Avatar_06.png",
+                    name: "Dr. Arsha",
+                    role: "Senior Therapist",
+                    desc: "Licensed Clinical Social Worker with expertise in depression, grief counseling, and group therapy.",
+                  },
+                  {
+                    image: "/testimonials/Avatar_08.png",
+                    name: "Yograj",
+                    role: "Techiee",
                     desc: "Licensed Clinical Social Worker with expertise in depression, grief counseling, and group therapy.",
                   },
                 ].map((member, index) => (
