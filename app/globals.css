@@ -278,15 +278,48 @@ video:focus-visible {
   }
 }
 
-/* Prevent video from showing black bars or borders */
-video {
-  object-fit: contain;
-  object-position: center;
+/* Additional cross-browser UI element removal */
+video::-webkit-media-controls-overlay-enclosure {
+  display: none !important;
 }
 
-/* Performance optimization */
+video::-webkit-media-controls-overlay-play-button {
+  display: none !important;
+}
+
+video::-webkit-media-controls-seek-back-button {
+  display: none !important;
+}
+
+video::-webkit-media-controls-seek-forward-button {
+  display: none !important;
+}
+
+/* Edge/IE specific */
+video::-ms-media-controls {
+  display: none !important;
+}
+
+/* Prevent context menu on video */
 video {
-  will-change: auto;
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Allow pointer events for interactive videos when needed */
+video.interactive {
+  pointer-events: auto;
+}
+
+/* Remove any possible borders or shadows that might appear */
+video {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
 }

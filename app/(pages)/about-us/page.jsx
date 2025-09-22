@@ -130,7 +130,7 @@ const About = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {[
                   {
-                    image: "/testimonials/Avatar_02.png",
+                    image: "/testimonials/Avatar_17.png",
                     name: "Duaa",
                     role: "Founder",
                     desc: "Duaa, the founder of PsychJinni, brings over 7 years of experience in relationship coaching, individual self-work, and corporate coaching. Known for her empathetic yet practical approach, she helps people find clarity, strengthen connections, and create lasting change.",
@@ -142,7 +142,7 @@ const About = () => {
                     desc: "Yashasvi leads Operations and Marketing at PsychJinni, ensuring every initiative runs smoothly while reaching the right audience with impact. With a strategic yet creative approach, she bridges efficiency with empathy, making sure PsychJinni’s vision connects meaningfully with people.",
                   },
                   {
-                    image: "/testimonials/Avatar_06.png",
+                    image: "/testimonials/Avatar_16.png",
                     name: "Dr. Sakshita Anand",
                     role: "Senior Coach & Consultant",
                     desc: "With over 15 years of experience, Dr. Sakshita has worked extensively with institutions, educational programs, and wellness initiatives. As Senior Coach and Consultant at PsychJinni, she offers knowledge-rich, compassionate guidance that supports both individuals and organizations in thriving with balance.",
