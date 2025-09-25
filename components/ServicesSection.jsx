@@ -90,8 +90,8 @@ export default function ServicesSection() {
                   {/* Right Section - Video */}
                   {service.image && (
                     <div className="flex-shrink-0 flex justify-center items-center">
-                      <video
-                        src={service.image}
+                      <img
+                        src="/home/corporate_home.gif"
                         autoPlay
                         loop
                         muted

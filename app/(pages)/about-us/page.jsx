@@ -148,6 +148,12 @@ const About = () => {
                     desc: "With over 15 years of experience, Dr. Sakshita has worked extensively with institutions, educational programs, and wellness initiatives. As Senior Coach and Consultant at PsychJinni, she offers knowledge-rich, compassionate guidance that supports both individuals and organizations in thriving with balance.",
                   },
                   {
+                    image: "/testimonials/Avatar_16.png",
+                    name: "Jasmina Khatun",
+                    role: "Lead Coach",
+                    desc: "With over 6 years of experience, Dr. Sakshita has worked extensively with institutions, educational programs, and wellness initiatives. As Senior Coach and Consultant at PsychJinni, she offers knowledge-rich, compassionate guidance that supports both individuals and organizations in thriving with balance.",
+                  },
+                  {
                     image: "/testimonials/Avatar_05.png",
                     name: "Arsha Alag",
                     role: "Lead Coach",
