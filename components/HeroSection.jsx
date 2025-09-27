@@ -37,12 +37,8 @@ export default function HeroSection() {
 
         {/* Hero Video */}
         <div className="z-10">
-          <video
-            src="/alternative-hero.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
+          <img
+            src="/hero-image.gif"
             className="w-[250px] sm:w-[300px] md:w-[400px] h-auto"
           />
         </div>
