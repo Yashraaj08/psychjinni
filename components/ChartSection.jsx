@@ -26,7 +26,7 @@ export default function ChartSection() {
           {/* Small Video under Text */}
           <img
             src={"/support.gif"}
-            className="mt-6 w-[80%] sm:w-[70%] md:w-[65%] lg:w-[60%] aspect-video object-contain"
+            className="mt-2 w-[80%] sm:w-[70%] md:w-[65%] lg:w-[70%] object-contain"
           />
         </div>
 
