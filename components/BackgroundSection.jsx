@@ -9,7 +9,7 @@ const BackgroundSection = ({
 }) => (
   <section
     className={clsx(
-      "relative flex flex-col md:flex-row items-stretch md:items-center justify-center md:justify-end overflow-hidden h-[40vh] sm:h-[50vh] md:h-[60vh]",
+      "pt-20 pb-10 relative flex flex-col md:flex-row items-stretch md:items-center justify-center md:justify-end overflow-hidden h-[45vh] sm:h-[55vh] md:h-[65vh]",
       className
     )}
   >
@@ -29,12 +29,7 @@ const BackgroundSection = ({
     {/* Text Content for mobile (below image) and for desktop (left of image) */}
     <div className="relative z-20 text-center md:text-right px-4 sm:px-6 md:px-12 w-full md:w-1/2 flex flex-col justify-center items-center md:items-end py-6 md:py-0 order-2">
       <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-snug text-white sm:leading-tight drop-shadow-lg md:drop-shadow-none">
-        <span className="block sm:hidden">
-          {title.split(" ").map((word, idx) => (
-            <span key={idx} className="block">{word}</span>
-          ))}
-        </span>
-        <span className="hidden sm:block">{title}</span>
+        <span>{title}</span>
       </h1>
       {children}
     </div>

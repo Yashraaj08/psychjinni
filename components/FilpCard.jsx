@@ -30,14 +30,14 @@ const FlipCardGrid = ({ title, subtitle, programs }) => {
             return (
               <div key={program.id}>
                 <div className="flip-card w-full h-[320px] sm:h-[360px] md:h-[380px] perspective-1000">
-                  <div className="flip-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group hover:[transform:rotateY(180deg)]">
+                  <div className="flip-inner relative w-full h-full ">
                     {/* Front */}
-                    <Card className="absolute inset-0 flex flex-col items-center justify-center p-6 border-0 shadow-xl rounded-2xl bg-gradient-to-br from-card to-card/80 [backface-visibility:hidden] transition-transform duration-500 group-hover:scale-[1.02]">
+                    <Card className="absolute inset-0 flex flex-col items-center justify-center p-6 border-0 shadow-xl rounded-2xl bg-[#FCFCFD] [backface-visibility:hidden] transition-transform duration-500 group-hover:scale-[1.02]">
                       {/* img or Icon */}
                       {program.img && (
                         <img
                           src={program.img}
-                          className={`w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 rounded-xl mb-4 object-cover border-2 border-slate-600}`}
+                          className={`w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 rounded-xl mb-4 object-cover border border-amber-200}`}
                         />
                       )}
 
@@ -75,7 +75,7 @@ const FlipCardGrid = ({ title, subtitle, programs }) => {
       </div>
 
       {/* Flip Effect Styles */}
-      <style
+      {/* <style
         dangerouslySetInnerHTML={{
           __html: `
             .perspective-1000 { perspective: 1000px; }
@@ -84,7 +84,7 @@ const FlipCardGrid = ({ title, subtitle, programs }) => {
             .flip-card .flip-inner > div { backface-visibility: hidden; }
           `,
         }}
-      />
+      /> */}
     </section>
   );
 };

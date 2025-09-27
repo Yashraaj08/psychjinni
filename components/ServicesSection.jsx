@@ -75,7 +75,7 @@ export default function ServicesSection() {
               passHref
               className={index === services.length - 1 ? "sm:col-span-2" : ""}
             >
-              <Card className="relative border border-orange-200 shadow-md hover:shadow-lg transition-shadow rounded-xl cursor-pointer h-full">
+              <Card className="relative border border-orange-200 bg-[#fefefe] shadow-md hover:shadow-lg transition-shadow rounded-xl cursor-pointer h-full">
                 <CardContent className="flex flex-col lg:flex-row items-center justify-between gap-4 p-6 w-full">
                   {/* Left Section - Title + Description */}
                   <div className="flex-1 text-center sm:text-left">

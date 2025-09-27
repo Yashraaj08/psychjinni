@@ -145,13 +145,13 @@ const About = () => {
                     image: "/testimonials/Avatar_16.png",
                     name: "Dr. Sakshita Anand",
                     role: "Senior Coach & Consultant",
-                    desc: "With over 15 years of experience, Dr. Sakshita has worked extensively with institutions, educational programs, and wellness initiatives. As Senior Coach and Consultant at PsychJinni, she offers knowledge-rich, compassionate guidance that supports both individuals and organizations in thriving with balance.",
+                    desc: "With over 10 years of experience, Dr. Sakshita has worked extensively with institutions, educational programs, and wellness initiatives. As Senior Coach and Consultant at PsychJinni, she offers knowledge-rich, compassionate guidance that supports both individuals and organizations in thriving with balance.",
                   },
                   {
                     image: "/testimonials/Avatar_19.png",
                     name: "Jasmina Khatun",
                     role: "Lead Coach",
-                    desc: "With 6 years of experience, Jasmina has been dedicated to empowering individuals and teams through impactful coaching and development programs. As Lead Coach at PsychJinni US, she brings a dynamic, supportive approach that fosters growth, resilience, and meaningful progress, helping clients navigate challenges and achieve lasting success.",
+                    desc: "With 6 years of experience, Jasmina has been dedicated to empowering individuals and teams through impactful coaching and development programs. As Lead Coach at PsychJinni, she brings a dynamic, supportive approach that fosters growth, resilience, and meaningful progress, helping clients navigate challenges and achieve lasting success.",
                   },
                   {
                     image: "/testimonials/Avatar_21.png",
