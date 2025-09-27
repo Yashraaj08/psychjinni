@@ -94,7 +94,7 @@ const testimonials = [
     text: "As a mother, I often ignored my own mental health. PsychJinni reminded me that caring for myself is also caring for my family. That hit home.",
   },
   {
-    image: "/testimonials/Avatar_03.png",
+    image: "/testimonials/Avatar_10.png",
     name: "Aman Verma",
     location: "Gurgaon, India",
     rating: 5,

@@ -10,7 +10,7 @@ const Relationship = () => {
   const relationshipPrograms = [
     {
       id: 1,
-      img: "/services/couple-heart.mov",
+      img: "/services/couple-heart.gif",
       title: "HeartSync: Couples & Partnership Coaching",
       tagline: "From conflict to connection—strengthen your partnership.",
       gradient: "from-red-400 to-rose-500",
@@ -20,7 +20,7 @@ const Relationship = () => {
     {
       id: 2,
       title: "Bridge Talk: Communication & Conflict Coaching",
-      img: "/services/bridge-comm.mov",
+      img: "/services/bridge-comm.gif",
       tagline: "Speak to be heard. Listen to be understood.",
       gradient: "from-blue-400 to-indigo-500",
       benefit:
@@ -28,7 +28,7 @@ const Relationship = () => {
     },
     {
       id: 3,
-      img: "/services/family-ties.mov",
+      img: "/services/family-ties.gif",
       title: "Family Ties: Family Dynamics & Harmony Coaching",
       tagline: "Stronger families. Stronger foundations.",
       gradient: "from-green-400 to-emerald-500",
@@ -38,7 +38,7 @@ const Relationship = () => {
     {
       id: 4,
       title: "Together Ahead: Pre-Marital & Life Transition Coaching",
-      img: "/services/pre-marraige.mov",
+      img: "/services/pre-marraige.gif",
       tagline: "Prepare for the journey, not just the day.",
       gradient: "from-purple-400 to-fuchsia-500",
       benefit:
@@ -47,7 +47,7 @@ const Relationship = () => {
     {
       id: 5,
       title: "Love Languages Lab: Emotional Intelligence & Intimacy Coaching",
-      img: "/services/love-language.mov",
+      img: "/services/love-language.gif",
       tagline: "Empathy is the secret ingredient to lasting bonds.",
       gradient: "from-pink-400 to-rose-500",
       benefit:
@@ -56,7 +56,7 @@ const Relationship = () => {
     {
       id: 6,
       title: "Trust Builder: Infidelity & Relationship Trust Coaching",
-      img: "/services/infidelity.mov",
+      img: "/services/infidelity.gif",
       tagline: "Healing wounds. Restoring connection.",
       gradient: "from-amber-400 to-orange-500",
       benefit:
@@ -65,7 +65,7 @@ const Relationship = () => {
     {
       id: 7,
       title: "Bond Beyond: Postpartum & New Parent Relationship Coaching",
-      img: "/services/new-parent.mov",
+      img: "/services/new-parent.gif",
       tagline: "Rediscover connection after life changes.",
       gradient: "from-cyan-400 to-sky-500",
       benefit:
@@ -74,7 +74,7 @@ const Relationship = () => {
     {
       id: 8,
       title: "Harmony Hub: Financial & Lifestyle Relationship Coaching",
-      img: "/services/finances.mov",
+      img: "/services/finances.gif",
       tagline: "Because money and life stress affect love.",
       gradient: "from-emerald-400 to-teal-500",
       benefit:
@@ -83,7 +83,7 @@ const Relationship = () => {
     {
       id: 9,
       title: "Family Peace: In-Law & Extended Family Coaching",
-      img: "/services/in-laws.mov",
+      img: "/services/in-laws.gif",
       tagline: "Creating bridges across households.",
       gradient: "from-indigo-400 to-blue-600",
       benefit:
@@ -92,7 +92,7 @@ const Relationship = () => {
     {
       id: 10,
       title: "SparkRevive: Reigniting Love & Intimacy",
-      img: "/services/spark-revie.mov",
+      img: "/services/spark-revie.gif",
       tagline: "Rediscover the passion in your relationship.",
       gradient: "from-rose-400 to-pink-600",
       benefit:
@@ -107,7 +107,7 @@ const Relationship = () => {
       {/* Hero Section */}
       <HeroVideoSection
         title="Relationship"
-        videoSrc="/home/relationship-inside.mov"
+        videoSrc="/home/relationship-inside.gif"
       />
 
       {/* Content Section */}

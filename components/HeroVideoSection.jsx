@@ -28,25 +28,17 @@ const HeroVideoSection = ({
 
     {/* Background Video (desktop only, above overlay) */}
     <div className="hidden md:block absolute inset-0 w-full h-full ">
-      <video
-        className="w-full md:w-1/2 h-full object-contain"
+      <img
+        className="w-full md:w-1/2 h-full object-cover"
         src={videoSrc}
-        autoPlay
-        loop
-        muted
-        playsInline
       />
     </div>
 
     {/* Video for mobile (stacked, not background, above overlay) */}
-    <div className="w-full md:hidden">
-      <video
-        className="w-full h-48 object-contain"
+    <div className="w-full md:hidden -my-20">
+      <img
+        className="w-full h-full sm:h-48 object-contain sm:object-cover"
         src={videoSrc}
-        autoPlay
-        loop
-        muted
-        playsInline
       />
     </div>
 

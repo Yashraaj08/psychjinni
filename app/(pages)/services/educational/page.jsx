@@ -11,7 +11,7 @@ const Educational = () => {
     {
       id: 1,
       title: "Ignite: Student Growth & Resilience Program",
-      img:"/services/student-growth.mov",
+      img:"/services/student-growth.gif",
       tagline: "Helping students learn smarter, not harder.",
       benefit:
         "Students learn resilience, focus, and self-confidence—skills that last well beyond exams.",
@@ -20,7 +20,7 @@ const Educational = () => {
     {
       id: 2,
       title: "EmpowerEd: Educator Development Workshops",
-      img: "/services/empowered.mov",
+      img: "/services/empowered.gif",
       tagline: "Empowered educators create empowered learners.",
       benefit:
         "Teachers who feel supported create classrooms where students feel safe, motivated, and inspired.",
@@ -29,7 +29,7 @@ const Educational = () => {
     {
       id: 3,
       title: "Family Connect: Parent & Student Support",
-      img: "/services/family-connect.mov",
+      img: "/services/family-connect.gif",
       tagline: "Because a child’s growth begins at home.",
       benefit:
         "Parents learn to support without pressuring, building stronger bonds and reducing conflict at home.",
@@ -38,7 +38,7 @@ const Educational = () => {
     {
       id: 4,
       title: "EduVision: Institutional Excellence & Wellness",
-      img: "/services/eduvision.mov",
+      img: "/services/eduvision.gif",
       tagline: "Helping institutions build legacies, not just curriculums.",
       benefit:
         "Institutions create reputations not just for academics, but for fostering mentally healthy communities.",
@@ -47,7 +47,7 @@ const Educational = () => {
     {
       id: 5,
       title: "Thrive: Adolescent & Youth Emotional Wellness",
-      img: "/services/thrive.mov",
+      img: "/services/thrive.gif",
       tagline: "Guiding young minds through life’s toughest years.",
       benefit:
         "This program gives adolescents tools to handle stress, belonging, and identity crises in healthy ways.",
@@ -56,7 +56,7 @@ const Educational = () => {
     {
       id: 6,
       title: "Future Pathways: Career & Motivation Coaching",
-      img: "/services/future-pathways.mov",
+      img: "/services/future-pathways.gif",
       tagline: "Clarity today. Success tomorrow.",
       benefit:
         "Students learn to pursue paths aligned with their true potential—not just external pressures.",
@@ -65,7 +65,7 @@ const Educational = () => {
     {
       id: 7,
       title: "Bridge: Parent–Teen Communication Labs",
-      img: "/services/bridge-family.mov",
+      img: "/services/bridge-family.gif",
       tagline: "Because conversations at home shape futures.",
       benefit:
         "Families learn to replace nagging, silence, and conflict with trust, empathy, and open communication.",
@@ -74,7 +74,7 @@ const Educational = () => {
     {
       id: 8,
       title: "Safe Space: Anti-Bullying & Peer Support Program",
-      img: "/services/bullying.mov",
+      img: "/services/bullying.gif",
       tagline: "Every student deserves safety, belonging & respect.",
       benefit:
         "Schools foster inclusivity and create safe communities where students thrive socially and academically.",
@@ -89,7 +89,7 @@ const Educational = () => {
       {/* Hero Section */}
       <HeroVideoSection
         title={`Education & <br class="hidden sm:block" /> Academic Wellness`}
-        videoSrc="/home/educational-inside.mov"
+        videoSrc="/home/educational-inside.gif"
         breakTitle={true}
       />
 

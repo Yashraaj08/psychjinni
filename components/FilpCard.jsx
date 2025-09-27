@@ -34,23 +34,11 @@ const FlipCardGrid = ({ title, subtitle, programs }) => {
                     {/* Front */}
                     <Card className="absolute inset-0 flex flex-col items-center justify-center p-6 border-0 shadow-xl rounded-2xl bg-gradient-to-br from-card to-card/80 [backface-visibility:hidden] transition-transform duration-500 group-hover:scale-[1.02]">
                       {/* img or Icon */}
-                      {program.img ? (
-                        <video
+                      {program.img && (
+                        <img
                           src={program.img}
-                          autoPlay
-                          loop
-                          muted
-                          playsInline
-                          className={`w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-xl mb-4 object-cover border-2 border-slate-600}`}
+                          className={`w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 rounded-xl mb-4 object-cover border-2 border-slate-600}`}
                         />
-                      ) : (
-                        <div
-                          className={`w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-2xl bg-gradient-to-br ${
-                            program.gradient || "from-blue-500 to-indigo-600"
-                          } flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform`}
-                        >
-                          <IconComponent className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
-                        </div>
                       )}
 
                       <h3 className="text-base sm:text-lg md:text-xl font-bold text-center text-foreground">

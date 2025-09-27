@@ -11,7 +11,7 @@ const Corporate = () => {
     {
       id: 1,
       title: "The Resilient Leader Program",
-      img: "/services/leader.mov",
+      img: "/services/leader.gif",
       tagline: "From managers to visionaries—unleash authentic leadership.",
       gradient: "from-amber-500 to-orange-600",
       benefit:
@@ -20,7 +20,7 @@ const Corporate = () => {
     {
       id: 2,
       title: "Synergy: High-Performance Team Coaching",
-      img: "/services/high-performance.mov",
+      img: "/services/high-performance.gif",
       tagline: "Better collaboration. Smarter outcomes.",
       gradient: "from-blue-500 to-purple-600",
       benefit:
@@ -29,7 +29,7 @@ const Corporate = () => {
     {
       id: 3,
       title: "Work-Life Balance & Well-being Series",
-      img: "/services/work-balance.mov",
+      img: "/services/work-balance.gif",
       tagline: "Healthy employees. Thriving workplaces.",
       gradient: "from-emerald-500 to-teal-600",
       benefit:
@@ -38,7 +38,7 @@ const Corporate = () => {
     {
       id: 4,
       title: "Culture Catalyst: Organizational Development Program",
-      img: "/services/culture-catlyst.mov",
+      img: "/services/culture-catlyst.gif",
       tagline: "Create workplaces where people feel safe, valued, and engaged.",
       gradient: "from-rose-500 to-pink-600",
       benefit:
@@ -47,7 +47,7 @@ const Corporate = () => {
     {
       id: 5,
       title: "Agility & Innovation Coaching",
-      img: "/services/agility-innovation.mov",
+      img: "/services/agility-innovation.gif",
       tagline: "Turning change into opportunity.",
       gradient: "from-teal-400 to-sky-500",
       benefit:
@@ -62,7 +62,7 @@ const Corporate = () => {
       {/* Hero Section */}
       <HeroVideoSection
         title={`Corporate Growth & <br class="hidden sm:block" /> Mental Fitness Programs`}
-        videoSrc="/home/corporate-inside.mov"
+        videoSrc="/home/corporate-inside.gif"
         breakTitle={true}
       />
 

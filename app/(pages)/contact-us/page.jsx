@@ -18,7 +18,7 @@ const ContactUs = () => {
       <Header />
 
       {/* Hero Section */}
-      <HeroVideoSection title="Contact Us" videoSrc="/home/contact-us.mov" />
+      <HeroVideoSection title="Contact Us" videoSrc="/home/contact-us.gif" />
 
       {/* Contact Information & Form Section */}
       <section className="mt-20 relative mx-4 sm:mx-8 lg:mx-20">

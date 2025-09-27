@@ -5,14 +5,14 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
     <section
-      className="relative flex flex-col items-center justify-center min-h-[100vh] md:min-h-screen text-center overflow-hidden px-4"
+      className="relative flex flex-col items-center justify-center min-h-[100vh] md:min-h-screen text-center overflow-hidden"
       style={{
         background:
           "linear-gradient(125deg, #a8c0ff 0%, #cfd9ff 30%, #e0c3fc 60%, #8ec5fc 100%)",
       }}
     >
       {/* Title & Subtitle */}
-      <div className="mt-40 sm:mt-48 md:mt-60 max-w-2xl md:max-w-3xl">
+      <div className="mt-40 sm:mt-48 md:mt-60 max-w-2xl md:max-w-3xl px-4">
         <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-slate-600 italic mb-4 leading-snug">
           Empowering Minds to Heal, Not Hide
         </h1>
@@ -56,14 +56,14 @@ export default function HeroSection() {
             src="/clouds-back.png"
             alt="Clouds Background"
             fill
-            className="object-contain z-0"
+            className="object-cover z-0"
           />
           {/* Front Cloud */}
           <Image
             src="/clouds-front.png"
             alt="Clouds Foreground"
             fill
-            className="object-contain z-10 md:mt-4"
+            className="object-cover z-10 md:mt-4"
           />
         </div>
       </div>

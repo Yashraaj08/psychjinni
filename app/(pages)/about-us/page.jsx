@@ -136,7 +136,7 @@ const About = () => {
                     desc: "Duaa, the founder of PsychJinni, brings over 7 years of experience in relationship coaching, individual self-work, and corporate coaching. Known for her empathetic yet practical approach, she helps people find clarity, strengthen connections, and create lasting change.",
                   },
                   {
-                    image: "/testimonials/Avatar_10.png",
+                    image: "/testimonials/Avatar_20.png",
                     name: "Yashasvi Sachdeva",
                     role: "Operations & Marketing Head",
                     desc: "Yashasvi leads Operations and Marketing at PsychJinni, ensuring every initiative runs smoothly while reaching the right audience with impact. With a strategic yet creative approach, she bridges efficiency with empathy, making sure PsychJinni’s vision connects meaningfully with people.",
@@ -148,19 +148,19 @@ const About = () => {
                     desc: "With over 15 years of experience, Dr. Sakshita has worked extensively with institutions, educational programs, and wellness initiatives. As Senior Coach and Consultant at PsychJinni, she offers knowledge-rich, compassionate guidance that supports both individuals and organizations in thriving with balance.",
                   },
                   {
-                    image: "/testimonials/Avatar_16.png",
+                    image: "/testimonials/Avatar_19.png",
                     name: "Jasmina Khatun",
                     role: "Lead Coach",
-                    desc: "With over 6 years of experience, Dr. Sakshita has worked extensively with institutions, educational programs, and wellness initiatives. As Senior Coach and Consultant at PsychJinni, she offers knowledge-rich, compassionate guidance that supports both individuals and organizations in thriving with balance.",
+                    desc: "With 6 years of experience, Jasmina has been dedicated to empowering individuals and teams through impactful coaching and development programs. As Lead Coach at PsychJinni US, [he/she/they] brings a dynamic, supportive approach that fosters growth, resilience, and meaningful progress, helping clients navigate challenges and achieve lasting success.",
                   },
                   {
-                    image: "/testimonials/Avatar_05.png",
+                    image: "/testimonials/Avatar_21.png",
                     name: "Arsha Alag",
                     role: "Lead Coach",
                     desc: "Arsha blends her expertise in educational and spiritual coaching to guide individuals toward balance, clarity, and growth. As Lead Coach at PsychJinni, her unique style integrates wisdom with practical tools, helping people nurture both personal understanding and inner well-being.",
                   },
                   {
-                    image: "/testimonials/Avatar_08.png",
+                    image: "/testimonials/Avatar_18.png",
                     name: "Yograj",
                     role: "Techiee",
                     desc: "Yograj is the tech mind behind PsychJinni, ensuring seamless digital experiences for our community. With his expertise in technology and innovation, he makes sure that every interaction is simple, reliable, and user-friendly—helping people connect with support effortlessly.",
