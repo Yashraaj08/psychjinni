@@ -46,7 +46,7 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section className="py-12 bg-[#fafafa]">
+    <section className="py-12 bg-[#FCFCFC]">
       {/* Heading */}
       <div className="text-center mb-8">
         <h2 className="text-3xl sm:text-4xl font-extrabold text-[#71722C]/70">

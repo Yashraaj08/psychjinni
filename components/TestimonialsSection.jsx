@@ -111,7 +111,7 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <div className="h-[40rem] rounded-md flex flex-col antialiased bg-white items-center justify-center relative overflow-hidden">
+    <div className="h-[40rem] rounded-md flex flex-col antialiased bg-[#FCFCFC] items-center justify-center relative overflow-hidden">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl font-bold text-[#71722C]/70 mb-4">
           Testimonials<span className="text-[#F36B1D]"></span>

@@ -9,7 +9,7 @@ export default function ChartSection() {
         }
       `}</style>
 
-      <div className="flex flex-col lg:flex-row items-center justify-between px-4 sm:px-8 lg:px-16 py-12 sm:py-16">
+      <div className="flex flex-col lg:flex-row items-center justify-between px-4 sm:px-8 lg:px-16 py-12 sm:py-16 bg-[#FCFCFC]">
         {/* Left Section */}
         <div className="flex flex-col items-center w-full lg:max-w-2xl">
           {/* Text */}

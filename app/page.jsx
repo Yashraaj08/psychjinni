@@ -11,7 +11,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 
 export default function Home() {
   return (
-    <div className="relative w-full #bg-[#C2E6FF]/40">
+    <div className="relative w-full">
       {/* Navbar */}
       <Header />
       <HeroSection />

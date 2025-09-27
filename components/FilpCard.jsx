@@ -30,20 +30,25 @@ const FlipCardGrid = ({ title, subtitle, programs }) => {
             return (
               <div key={program.id}>
                 <div className="flip-card w-full h-[320px] sm:h-[360px] md:h-[380px] perspective-1000">
-                  <div className="flip-inner relative w-full h-full ">
+                  <div className="flip-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group hover:[transform:rotateY(180deg)]">
                     {/* Front */}
-                    <Card className="absolute inset-0 flex flex-col items-center justify-center p-6 border-0 shadow-xl rounded-2xl bg-[#FCFCFD] [backface-visibility:hidden] transition-transform duration-500 group-hover:scale-[1.02]">
-                      {/* img or Icon */}
-                      {program.img && (
-                        <img
-                          src={program.img}
-                          className={`w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 rounded-xl mb-4 object-cover border border-amber-200}`}
-                        />
-                      )}
+                    <Card className="absolute inset-0 flex flex-col items-center justify-center p-6 border-0 shadow-xl rounded-2xl [backface-visibility:hidden] transition-transform duration-500 group-hover:scale-[1.02]">
+                      {/* Image + Title wrapper */}
+                      <div className="flex flex-col items-center">
+                        {program.img && (
+                          <img
+                            src={program.img}
+                            className="w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 rounded-xl object-cover border border-slate-300 mb-3"
+                          />
+                        )}
 
-                      <h3 className="text-base sm:text-lg md:text-xl font-bold text-center text-foreground">
-                        {program.title}
-                      </h3>
+                        {/* Fixed-height title box to keep alignment stable */}
+                        <div className="h-12 sm:h-14 md:h-16 flex items-center">
+                          <h3 className="text-base sm:text-lg md:text-xl font-bold text-center text-foreground leading-tight">
+                            {program.title}
+                          </h3>
+                        </div>
+                      </div>
                     </Card>
 
                     {/* Back */}
@@ -75,7 +80,7 @@ const FlipCardGrid = ({ title, subtitle, programs }) => {
       </div>
 
       {/* Flip Effect Styles */}
-      {/* <style
+      <style
         dangerouslySetInnerHTML={{
           __html: `
             .perspective-1000 { perspective: 1000px; }
@@ -84,7 +89,7 @@ const FlipCardGrid = ({ title, subtitle, programs }) => {
             .flip-card .flip-inner > div { backface-visibility: hidden; }
           `,
         }}
-      /> */}
+      />
     </section>
   );
 };
