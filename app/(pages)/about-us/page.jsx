@@ -151,7 +151,7 @@ const About = () => {
                     image: "/testimonials/Avatar_19.png",
                     name: "Jasmina Khatun",
                     role: "Lead Coach",
-                    desc: "With 6 years of experience, Jasmina has been dedicated to empowering individuals and teams through impactful coaching and development programs. As Lead Coach at PsychJinni US, [he/she/they] brings a dynamic, supportive approach that fosters growth, resilience, and meaningful progress, helping clients navigate challenges and achieve lasting success.",
+                    desc: "With 6 years of experience, Jasmina has been dedicated to empowering individuals and teams through impactful coaching and development programs. As Lead Coach at PsychJinni US, she brings a dynamic, supportive approach that fosters growth, resilience, and meaningful progress, helping clients navigate challenges and achieve lasting success.",
                   },
                   {
                     image: "/testimonials/Avatar_21.png",
