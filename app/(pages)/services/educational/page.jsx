@@ -98,8 +98,8 @@ const Educational = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="mb-16">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Because strong minds create strong futures.
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-center">
+                Because Strong Minds Create Strong Futures.
               </h2>
               <p className="text-muted-foreground text-lg mb-6">
                 At PsychJinni, we know that education is more than just
@@ -134,7 +134,7 @@ const Educational = () => {
                 At <b>PsychJinni</b>, our mission is clear: to help students{" "}
                 <b>
                   excel without anxiety, learn without fear, and grow with
-                  balance.
+                  balance. {" "}
                 </b>
                 By empowering <b>educators, parents, and institutions</b>, we
                 create a future where learning communities are as{" "}

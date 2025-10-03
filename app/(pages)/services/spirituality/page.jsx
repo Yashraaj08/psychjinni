@@ -98,8 +98,8 @@ const Spirituality = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="mb-16">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Because inner balance creates outer clarity.
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-center">
+                Because Inner Balance Creates Outer Clarity.
               </h2>
               <p className="text-muted-foreground text-lg mb-6">
                 A grounded, mindful life enhances emotional resilience, clarity
@@ -130,7 +130,7 @@ const Spirituality = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">
-                Start Your Relationship Journey Today
+                Start Your Spirituality & Mindfulness Journey Today
               </h2>
               <p className="text-muted-foreground text-lg mb-6">
                 At <b>PsychJinni</b>, we don’t prescribe a one-size-fits-all

@@ -85,7 +85,7 @@ export default function StatsSection() {
 			<div className="max-w-4xl mx-auto relative z-10">
 				{/* Title */}
 				<h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
-					From silence to strength, with PsychJinni
+					From Silence To Strength, with PsychJinni
 				</h2>
 
 				{/* Stats */}

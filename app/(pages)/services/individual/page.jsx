@@ -98,8 +98,8 @@ const Individual = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="mb-16">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Your growth journey starts here.
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-center">
+                Your Growth Journey Starts Here.
               </h2>
               <p className="text-muted-foreground text-lg mb-6">
                 At PsychJinni, we know that life can feel overwhelming—whether

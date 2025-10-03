@@ -56,7 +56,7 @@ const Relationship = () => {
     {
       id: 6,
       title: "Trust Builder: Infidelity & Relationship Trust Coaching",
-      img: "/services/infidelity.gif",
+      img: "/services/Infidelity.gif",
       tagline: "Healing wounds. Restoring connection.",
       gradient: "from-amber-400 to-orange-500",
       benefit:
@@ -115,8 +115,8 @@ const Relationship = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="mb-16">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Because thriving relationships create thriving lives.
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-6">
+                Because Thriving Relationships Create Thriving Lives.
               </h2>
               <p className="text-muted-foreground text-lg mb-6">
                 Healthy, fulfilling relationships are the cornerstone of

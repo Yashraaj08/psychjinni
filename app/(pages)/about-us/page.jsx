@@ -139,7 +139,7 @@ const About = () => {
                     image: "/testimonials/Avatar_20.png",
                     name: "Yashasvi Sachdeva",
                     role: "Operations & Marketing Head",
-                    desc: "Yashasvi leads Operations and Marketing at PsychJinni, ensuring every initiative runs smoothly while reaching the right audience with impact. With a strategic yet creative approach, she bridges efficiency with empathy, making sure PsychJinni’s vision connects meaningfully with people.",
+                    desc: "Yashasvi leads Operations and Marketing at PsychJinni, ensuring every initiative runs smoothly while reaching the right audience with impact. With a strategic yet creative approach, he bridges efficiency with empathy, making sure PsychJinni’s vision connects meaningfully with people.",
                   },
                   {
                     image: "/testimonials/Avatar_16.png",
